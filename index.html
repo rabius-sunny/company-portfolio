@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Agency</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'dark-green': '#0D3730',
+              gold: '#CEAD73'
+            },
+            fontFamily: {
+              montserrat: ['Montserrat', 'sans-serif']
+            }
+          }
+        }
+      };
+    </script>
+    <style>
+      body {
+        color: #cead73;
+      }
+      .box {
+        max-width: 1500px;
+        margin: auto;
+        padding: 0 16px;
+      }
+    </style>
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="font-montserrat">
+    <div class="relative">
+      <img
+        src="/assets/images/our-process.jpg"
+        alt="our process"
+        class="w-full h-[550px] lg:h-[500px] 2xl:h-[390px] object-cover brightness-[15%]"
+      />
+      <div
+        class="absolute inset-0 text-center box flex flex-col justify-center"
+      >
+        <h3
+          class="font-normal sm:font-medium text-[30px] sm:text-[45px] leading-[100%] sm:leading-[108%] tracking-[0.0em sm:tracking-[0.0em] text-gold mb-12"
+        >
+          Our Process
+        </h3>
+        <p class="text-gold">
+          Lorem ipsum is a dummy or placeholder text commonly used in graphic
+          design, publishing, and web development.
+        </p>
+
+        <div
+          class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-6 mt-12"
+        >
+          <div
+            class="border border-gold flex items-center justify-between gap-3"
+          >
+            <div class="px-5 text-start font-medium lg:text-lg">
+              <p>Meet &</p>
+              <p>Greet</p>
+            </div>
+            <img
+              src="/assets/icons/meet-greet.png"
+              alt=""
+              class="w-[80px] h-[75px] lg:w-[100px] lg:h-[90px]"
+            />
+          </div>
+          <div
+            class="border border-gold flex items-center justify-between gap-3"
+          >
+            <div class="px-5 text-start font-medium lg:text-lg">
+              <p>Design</p>
+              <p>Development</p>
+            </div>
+            <img
+              src="/assets/icons/meet-greet.png"
+              alt=""
+              class="w-[80px] h-[75px] lg:w-[100px] lg:h-[90px]"
+            />
+          </div>
+          <div
+            class="border border-gold flex items-center justify-between gap-3"
+          >
+            <div class="px-5 text-start font-medium lg:text-lg">
+              <p>Place</p>
+              <p>the Order</p>
+            </div>
+            <img
+              src="/assets/icons/meet-greet.png"
+              alt=""
+              class="w-[80px] h-[75px] lg:w-[100px] lg:h-[90px]"
+            />
+          </div>
+          <div
+            class="border border-gold flex items-center justify-between gap-3"
+          >
+            <div class="px-5 text-start font-medium lg:text-lg">
+              <p>Installation</p>
+              <p>Process</p>
+            </div>
+            <img
+              src="/assets/icons/meet-greet.png"
+              alt=""
+              class="w-[80px] h-[75px] lg:w-[100px] lg:h-[90px]"
+            />
+          </div>
+          <div
+            class="border border-gold flex items-center justify-between gap-3"
+          >
+            <div class="px-5 text-start font-medium lg:text-lg">
+              <p>Moving In</p>
+            </div>
+            <img
+              src="/assets/icons/meet-greet.png"
+              alt=""
+              class="w-[80px] h-[75px] lg:w-[100px] lg:h-[90px]"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
