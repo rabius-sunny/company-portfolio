@@ -29,7 +29,7 @@
         background-color: #000;
       }
       .box {
-        max-width: 1500px;
+        max-width: 1700px;
         margin: auto;
         padding: 0 16px;
       }
@@ -61,1064 +61,1272 @@
         alt="our process"
         class="w-full h-[550px] lg:h-[500px] 2xl:h-[390px] object-cover brightness-[15%]"
       />
+      
+      <!-- ============================================== -->
+      <!-- ✨      Header Section                        ✨ -->
+      <!-- ============================================== -->
+      <header class="fixed box top-0 left-0 right-0 z-50">
+        <div class="relative h-[58px] mt-[57px]">
+          <!-- Glass Background -->
+          <div class="absolute inset-0 w-full h-[58px]">
+            <!-- Glass backdrop -->
+            <div
+              class="absolute inset-0 w-full h-full"
+              style="
+                background: rgba(13, 55, 48, 0.03);
+                backdrop-filter: blur(13.2px);
+                -webkit-backdrop-filter: blur(13.2px);
+              "
+            ></div>
+
+            <!-- Glass border with gradient -->
+            <div
+              class="absolute inset-0 w-full h-full border"
+              style="
+                border-image: linear-gradient(
+                    90deg,
+                    rgba(179, 161, 102, 0.46) 3%,
+                    rgba(140, 131, 102, 0) 16%,
+                    rgba(140, 131, 102, 0) 51%,
+                    rgba(179, 161, 102, 1) 71%,
+                    rgba(102, 102, 102, 0) 92%
+                  )
+                  1;
+                backdrop-filter: blur(13.2px);
+                -webkit-backdrop-filter: blur(13.2px);
+              "
+            ></div>
+          </div>
+
+          <!-- Content Container - Full Width with Max Width Constraint -->
+          <div class="flex justify-between items-center  h-full px-[78px]";">
+            <!-- Logo -->
+         
+              <div class="z-10">
+                <!-- Logo SVG placeholder - you can replace with actual logo -->
+                <img
+                  src="/assets/icons/logo.svg"
+                  alt="Logo"
+                  class="w-[88px]"
+                />
+            </div>
+
+            <!-- Navigation Menu -->
+            <nav class="flex items-center space-x-[50px] z-10">
+              <!-- HOME -->
+              <div class="relative group">
+                <a
+                  href="#"
+                  class="text-gold hover:text-white duration-300 text-sm font-medium uppercase leading-[17px] tracking-wide"
+                >
+                  HOME
+                </a>
+                <!-- Chevron Down Icon -->
+                <svg 
+                  class="absolute top-1/2 -translate-y-1/2 left-[calc(100%+4px)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" 
+                  width="11" 
+                  height="6" 
+                  viewBox="0 0 11 6" 
+                  fill="none" 
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M4.88898 5.76144L-5.0361e-08 1.15212L1.22203 -4.27409e-07L5.5 4.03325L9.77797 -5.34166e-08L11 1.15212L6.11102 5.76144C5.94895 5.91419 5.72916 6 5.5 6C5.27084 6 5.05105 5.91419 4.88898 5.76144Z" fill="white"/>
+                </svg>
+              </div>
+
+              <!-- What we do with dropdown -->
+              <div class="relative group">
+                <a
+                  href="#"
+                  class="text-gold hover:text-white duration-300 text-sm font-medium uppercase leading-[17px] tracking-wide"
+                >
+                  what we do
+                </a>
+                <!-- Chevron Down Icon -->
+                <svg 
+                  class="absolute top-1/2 -translate-y-1/2 left-[calc(100%+4px)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" 
+                  width="11" 
+                  height="6" 
+                  viewBox="0 0 11 6" 
+                  fill="none" 
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M4.88898 5.76144L-5.0361e-08 1.15212L1.22203 -4.27409e-07L5.5 4.03325L9.77797 -5.34166e-08L11 1.15212L6.11102 5.76144C5.94895 5.91419 5.72916 6 5.5 6C5.27084 6 5.05105 5.91419 4.88898 5.76144Z" fill="white"/>
+                </svg>
+              </div>
+
+              <!-- Portfolio -->
+              <div class="relative group">
+                <a
+                  href="#"
+                  class="text-gold hover:text-white duration-300 text-sm font-medium uppercase leading-[17px] tracking-wide"
+                >
+                  portfolio
+                </a>
+                <!-- Chevron Down Icon -->
+                <svg 
+                  class="absolute top-1/2 -translate-y-1/2 left-[calc(100%+4px)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" 
+                  width="11" 
+                  height="6" 
+                  viewBox="0 0 11 6" 
+                  fill="none" 
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M4.88898 5.76144L-5.0361e-08 1.15212L1.22203 -4.27409e-07L5.5 4.03325L9.77797 -5.34166e-08L11 1.15212L6.11102 5.76144C5.94895 5.91419 5.72916 6 5.5 6C5.27084 6 5.05105 5.91419 4.88898 5.76144Z" fill="white"/>
+                </svg>
+              </div>
+
+              <!-- Why choose us -->
+              <div class="relative group">
+                <a
+                  href="#"
+                  class="text-gold hover:text-white duration-300 text-sm font-medium uppercase leading-[17px] tracking-wide"
+                >
+                  why choose us
+                </a>
+                <!-- Chevron Down Icon -->
+                <svg 
+                  class="absolute top-1/2 -translate-y-1/2 left-[calc(100%+4px)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" 
+                  width="11" 
+                  height="6" 
+                  viewBox="0 0 11 6" 
+                  fill="none" 
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M4.88898 5.76144L-5.0361e-08 1.15212L1.22203 -4.27409e-07L5.5 4.03325L9.77797 -5.34166e-08L11 1.15212L6.11102 5.76144C5.94895 5.91419 5.72916 6 5.5 6C5.27084 6 5.05105 5.91419 4.88898 5.76144Z" fill="white"/>
+                </svg>
+              </div>
+
+              <!-- How we work -->
+              <div class="relative group">
+                <a
+                  href="#"
+                  class="text-gold hover:text-white duration-300 text-sm font-medium uppercase leading-[17px] tracking-wide"
+                >
+                  how we work
+                </a>
+                <!-- Chevron Down Icon -->
+                <svg 
+                  class="absolute top-1/2 -translate-y-1/2 left-[calc(100%+4px)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" 
+                  width="11" 
+                  height="6" 
+                  viewBox="0 0 11 6" 
+                  fill="none" 
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M4.88898 5.76144L-5.0361e-08 1.15212L1.22203 -4.27409e-07L5.5 4.03325L9.77797 -5.34166e-08L11 1.15212L6.11102 5.76144C5.94895 5.91419 5.72916 6 5.5 6C5.27084 6 5.05105 5.91419 4.88898 5.76144Z" fill="white"/>
+                </svg>
+              </div>
+
+              <!-- About us -->
+              <div class="relative group">
+                <a
+                  href="#"
+                  class="text-gold hover:text-white duration-300 text-sm font-medium uppercase leading-[17px] tracking-wide"
+                >
+                  about us
+                </a>
+                <!-- Chevron Down Icon -->
+                <svg 
+                  class="absolute top-1/2 -translate-y-1/2 left-[calc(100%+4px)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" 
+                  width="11" 
+                  height="6" 
+                  viewBox="0 0 11 6" 
+                  fill="none" 
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M4.88898 5.76144L-5.0361e-08 1.15212L1.22203 -4.27409e-07L5.5 4.03325L9.77797 -5.34166e-08L11 1.15212L6.11102 5.76144C5.94895 5.91419 5.72916 6 5.5 6C5.27084 6 5.05105 5.91419 4.88898 5.76144Z" fill="white"/>
+                </svg>
+              </div>
+
+              <!-- Contact us -->
+              <div class="relative group">
+                <a
+                  href="#"
+                  class="text-gold hover:text-white duration-300 text-sm font-medium uppercase leading-[17px] tracking-wide"
+                >
+                  contact us
+                </a>
+                <!-- Chevron Down Icon -->
+                <svg 
+                  class="absolute top-1/2 -translate-y-1/2 left-[calc(100%+4px)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" 
+                  width="11" 
+                  height="6" 
+                  viewBox="0 0 11 6" 
+                  fill="none" 
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M4.88898 5.76144L-5.0361e-08 1.15212L1.22203 -4.27409e-07L5.5 4.03325L9.77797 -5.34166e-08L11 1.15212L6.11102 5.76144C5.94895 5.91419 5.72916 6 5.5 6C5.27084 6 5.05105 5.91419 4.88898 5.76144Z" fill="white"/>
+                </svg>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </header>
+
       <div
         class="absolute inset-0 text-center box flex flex-col justify-center"
       >
+          <h3
+            class="font-normal sm:font-medium text-[30px] sm:text-[45px] leading-[100%] sm:leading-[108%] tracking-[0.0em sm:tracking-[0.0em] text-gold mb-12"
+          >
+            Our Process
+          </h3>
+          <p class="text-gold">
+            Lorem ipsum is a dummy or placeholder text commonly used in graphic
+            design, publishing, and web development.
+          </p>
+
+          <div
+            class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-6 mt-12"
+          >
+            <div
+              class="border border-gold flex items-center justify-between gap-1 md:gap-3"
+            >
+              <div
+                class="px-2 text-xs sm:text-base md:px-5 text-start font-medium lg:text-lg"
+              >
+                <p>Meet &</p>
+                <p>Greet</p>
+              </div>
+              <img
+                src="/assets/icons/meet-greet.png"
+                alt=""
+                class="w-[50px] sm:w-[80px] sm:h-[75px] lg:w-[100px] lg:h-[90px]"
+              />
+            </div>
+            <div
+              class="border border-gold flex items-center justify-between gap-1 md:gap-3"
+            >
+              <div
+                class="px-2 text-xs sm:text-base md:px-5 text-start font-medium lg:text-lg"
+              >
+                <p>Design</p>
+                <p>Development</p>
+              </div>
+              <img
+                src="/assets/icons/meet-greet.png"
+                alt=""
+                class="w-[50px] sm:w-[80px] sm:h-[75px] lg:w-[100px] lg:h-[90px]"
+              />
+            </div>
+            <div
+              class="border border-gold flex items-center justify-between gap-1 md:gap-3"
+            >
+              <div
+                class="px-2 text-xs sm:text-base md:px-5 text-start font-medium lg:text-lg"
+              >
+                <p>Place</p>
+                <p>the Order</p>
+              </div>
+              <img
+                src="/assets/icons/meet-greet.png"
+                alt=""
+                class="w-[50px] sm:w-[80px] sm:h-[75px] lg:w-[100px] lg:h-[90px]"
+              />
+            </div>
+            <div
+              class="border border-gold flex items-center justify-between gap-1 md:gap-3"
+            >
+              <div
+                class="px-2 text-xs sm:text-base md:px-5 text-start font-medium lg:text-lg"
+              >
+                <p>Installation</p>
+                <p>Process</p>
+              </div>
+              <img
+                src="/assets/icons/meet-greet.png"
+                alt=""
+                class="w-[50px] sm:w-[80px] sm:h-[75px] lg:w-[100px] lg:h-[90px]"
+              />
+            </div>
+            <div
+              class="border border-gold flex items-center justify-between gap-1 md:gap-3"
+            >
+              <div
+                class="px-2 text-xs sm:text-base md:px-5 text-start font-medium lg:text-lg"
+              >
+                <p>Moving In</p>
+              </div>
+              <img
+                src="/assets/icons/meet-greet.png"
+                alt=""
+                class="w-[50px] sm:w-[80px] sm:h-[75px] lg:w-[100px] lg:h-[90px]"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============================================== -->
+      <!-- ✨      Why Choose Us Section               ✨ -->
+      <!-- ============================================== -->
+      <div class="bg-dark-green relative overflow-hidden">
+        <div class="box pt-32 lg:pt-[200px] pb-[90px] relative">
+          <div class="grid grid-cols-1 xl:grid-cols-2 gap-10 xl:gap-5">
+            <div>
+              <h3
+                class="font-normal sm:font-medium text-[30px] sm:text-[45px] leading-[100%] sm:leading-[108%] tracking-[0.0em sm:tracking-[0.0em] mb-10"
+              >
+                Why Choose Us
+              </h3>
+              <p>
+                Lorem ipsum is a dummy or placeholder text commonly used in
+                graphic design, publishing, and web development.
+              </p>
+            </div>
+            <div
+              class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-3 gap-4 md:gap-7"
+            >
+              <div class="flex flex-col gap-4">
+                <div
+                  class="border border-gold hover:border-white p-4 flex items-center justify-center"
+                >
+                  <img
+                    src="/assets/icons/premium-materials.svg"
+                    alt=""
+                    class="max-w-[65px] max-h-[60px]"
+                  />
+                  .
+                </div>
+                <p class="text-center">Premium Materials</p>
+              </div>
+              <div class="flex flex-col gap-4">
+                <div
+                  class="border border-gold hover:border-white p-4 flex items-center justify-center"
+                >
+                  <img
+                    src="/assets/icons/innovative-designs.svg"
+                    alt=""
+                    class="max-w-[65px] max-h-[60px]"
+                  />
+                  .
+                </div>
+                <p class="text-center">Innovative Designs</p>
+              </div>
+              <div class="flex flex-col gap-4">
+                <div
+                  class="border border-gold hover:border-white p-4 flex items-center justify-center"
+                >
+                  <img
+                    src="/assets/icons/client-centric.svg"
+                    alt=""
+                    class="max-w-[65px] max-h-[60px]"
+                  />
+                  .
+                </div>
+                <p class="text-center">Client-Centric Approach</p>
+              </div>
+              <div class="flex flex-col gap-4">
+                <div
+                  class="border border-gold hover:border-white p-4 flex items-center justify-center"
+                >
+                  <img
+                    src="/assets/icons/affordable-luxury.svg"
+                    alt=""
+                    class="max-w-[65px] max-h-[60px]"
+                  />
+                  .
+                </div>
+                <p class="text-center">Affordable Luxury</p>
+              </div>
+              <div class="flex flex-col gap-4">
+                <div
+                  class="border border-gold hover:border-white p-4 flex items-center justify-center"
+                >
+                  <img
+                    src="/assets/icons/sustainability.svg"
+                    alt=""
+                    class="max-w-[65px] max-h-[60px]"
+                  />
+                  .
+                </div>
+                <p class="text-center">Sustainability Smart Interiors</p>
+              </div>
+              <div class="flex flex-col gap-4">
+                <div
+                  class="border border-gold hover:border-white p-4 flex items-center justify-center"
+                >
+                  <img
+                    src="/assets/icons/expert-craftsmanship.svg"
+                    alt=""
+                    class="max-w-[65px] max-h-[60px]"
+                  />
+                  .
+                </div>
+                <p class="text-center">Expert Craftsmanship</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Vertical dashed stripes -->
+        <div
+          class="absolute inset-0 opacity-[8%]"
+          style="
+            background-image: repeating-linear-gradient(
+              90deg,
+              transparent 0px,
+              transparent 122px,
+              #cead73 122px,
+              #cead73 123px,
+              transparent 123px,
+              transparent 245px
+            );
+            background-size: 245px 100%;
+            mask-image: repeating-linear-gradient(
+              0deg,
+              #000 0px,
+              #000 8px,
+              transparent 8px,
+              transparent 16px
+            );
+            -webkit-mask-image: repeating-linear-gradient(
+              0deg,
+              #000 0px,
+              #000 8px,
+              transparent 8px,
+              transparent 16px
+            );
+          "
+        ></div>
+        <!-- Horizontal dashed stripes -->
+        <div
+          class="absolute inset-0 opacity-[8%]"
+          style="
+            background-image: repeating-linear-gradient(
+              0deg,
+              transparent 0px,
+              transparent 97px,
+              #cead73 97px,
+              #cead73 98px,
+              transparent 98px,
+              transparent 195px
+            );
+            background-size: 100% 195px;
+            mask-image: repeating-linear-gradient(
+              90deg,
+              #000 0px,
+              #000 8px,
+              transparent 8px,
+              transparent 16px
+            );
+            -webkit-mask-image: repeating-linear-gradient(
+              90deg,
+              #000 0px,
+              #000 8px,
+              transparent 8px,
+              transparent 16px
+            );
+          "
+        ></div>
+      </div>
+
+      <!-- ============================================== -->
+      <!-- ✨      Services Section                       ✨ -->
+      <!-- ============================================== -->
+      <div class="">
+        <div class="box pt-2 pb-[117px]">
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-8 mt-16"
+          >
+            <div class="relative overflow-hidden group cursor-pointer">
+              <div class="relative h-[364px]">
+                <img
+                  src="/assets/images/interior.png"
+                  alt="Residential Design"
+                  class="w-full h-full object-cover"
+                />
+
+                <div class="absolute bottom-0 left-0 w-[80%] bg-dark-green p-6">
+                  <!-- Link Icon at top-right of green box -->
+                  <div
+                    class="absolute top-4 right-4 w-[29px] h-[30px] bg-gold flex items-center justify-center group-hover:bg-white transition-colors duration-300"
+                  >
+                    <svg
+                      width="12"
+                      height="12"
+                      viewBox="0 0 12 12"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M8.272 5.775C8.08 5.775 7.897 5.851 7.761 5.986C7.626 6.122 7.55 6.305 7.55 6.497V10.828C7.55 11.02 7.474 11.203 7.339 11.339C7.203 11.474 7.02 11.55 6.828 11.55H-1.834C-2.026 11.55 -2.209 11.474 -2.345 11.339C-2.48 11.203 -2.556 11.02 -2.556 10.828V2.166C-2.556 1.974 -2.48 1.791 -2.345 1.655C-2.209 1.52 -2.026 1.444 -1.834 1.444H2.497C2.688 1.444 2.872 1.368 3.007 1.232C3.143 1.097 3.219 0.913 3.219 0.722C3.219 0.53 3.143 0.347 3.007 0.211C2.872 0.076 2.688 0 2.497 0H-1.834C-2.409 0 -2.96 0.228 -3.366 0.634C-3.772 1.04 -4 1.591 -4 2.166V10.828C-4 11.402 -3.772 11.953 -3.366 12.359C-2.96 12.766 -2.409 12.994 -1.834 12.994H6.828C7.402 12.994 7.953 12.766 8.359 12.359C8.766 11.953 8.994 11.402 8.994 10.828V6.497C8.994 6.305 8.918 6.122 8.782 5.986C8.647 5.851 8.463 5.775 8.272 5.775Z"
+                        fill="#0D3730"
+                        transform="translate(2, 2)"
+                      />
+                      <path
+                        d="M5.384 1.444H6.525L1.984 5.977C1.917 6.044 1.863 6.124 1.826 6.212C1.79 6.3 1.771 6.394 1.771 6.49C1.771 6.585 1.79 6.679 1.826 6.767C1.863 6.855 1.917 6.935 1.984 7.002C2.051 7.07 2.131 7.124 2.219 7.16C2.307 7.197 2.402 7.216 2.497 7.216C2.592 7.216 2.686 7.197 2.774 7.16C2.862 7.124 2.942 7.07 3.009 7.002L7.55 2.469V3.609C7.55 3.801 7.626 3.984 7.761 4.12C7.897 4.255 8.08 4.331 8.272 4.331C8.463 4.331 8.647 4.255 8.782 4.12C8.918 3.984 8.994 3.801 8.994 3.609V0.722C8.994 0.53 8.918 0.347 8.782 0.211C8.647 0.076 8.463 0 8.272 0H5.384C5.193 0 5.009 0.076 4.874 0.211C4.739 0.347 4.662 0.53 4.662 0.722C4.662 0.913 4.739 1.097 4.874 1.232C5.009 1.368 5.193 1.444 5.384 1.444Z"
+                        fill="#0D3730"
+                        transform="translate(2, 2)"
+                      />
+                    </svg>
+                  </div>
+
+                  <!-- Text Content -->
+                  <div class="pr-12">
+                    <h4 class="text-gold text-sm font-normal mb-2">
+                      // Residential
+                    </h4>
+                    <p class="text-gold text-sm font-medium leading-tight">
+                      Luxury Residential
+                    </p>
+                    <p class="text-gold text-sm font-medium leading-tight">
+                      Apartment Design
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="relative overflow-hidden group cursor-pointer">
+              <div class="relative h-[364px]">
+                <img
+                  src="/assets/images/interior.png"
+                  alt="Commercial Design"
+                  class="w-full h-full object-cover"
+                />
+
+                <div class="absolute bottom-0 left-0 w-[80%] bg-dark-green p-6">
+                  <!-- Link Icon at top-right of green box -->
+                  <div
+                    class="absolute top-4 right-4 w-[29px] h-[30px] bg-gold flex items-center justify-center group-hover:bg-white transition-colors duration-300"
+                  >
+                    <svg
+                      width="12"
+                      height="12"
+                      viewBox="0 0 12 12"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M8.272 5.775C8.08 5.775 7.897 5.851 7.761 5.986C7.626 6.122 7.55 6.305 7.55 6.497V10.828C7.55 11.02 7.474 11.203 7.339 11.339C7.203 11.474 7.02 11.55 6.828 11.55H-1.834C-2.026 11.55 -2.209 11.474 -2.345 11.339C-2.48 11.203 -2.556 11.02 -2.556 10.828V2.166C-2.556 1.974 -2.48 1.791 -2.345 1.655C-2.209 1.52 -2.026 1.444 -1.834 1.444H2.497C2.688 1.444 2.872 1.368 3.007 1.232C3.143 1.097 3.219 0.913 3.219 0.722C3.219 0.53 3.143 0.347 3.007 0.211C2.872 0.076 2.688 0 2.497 0H-1.834C-2.409 0 -2.96 0.228 -3.366 0.634C-3.772 1.04 -4 1.591 -4 2.166V10.828C-4 11.402 -3.772 11.953 -3.366 12.359C-2.96 12.766 -2.409 12.994 -1.834 12.994H6.828C7.402 12.994 7.953 12.766 8.359 12.359C8.766 11.953 8.994 11.402 8.994 10.828V6.497C8.994 6.305 8.918 6.122 8.782 5.986C8.647 5.851 8.463 5.775 8.272 5.775Z"
+                        fill="#0D3730"
+                        transform="translate(2, 2)"
+                      />
+                      <path
+                        d="M5.384 1.444H6.525L1.984 5.977C1.917 6.044 1.863 6.124 1.826 6.212C1.79 6.3 1.771 6.394 1.771 6.49C1.771 6.585 1.79 6.679 1.826 6.767C1.863 6.855 1.917 6.935 1.984 7.002C2.051 7.07 2.131 7.124 2.219 7.16C2.307 7.197 2.402 7.216 2.497 7.216C2.592 7.216 2.686 7.197 2.774 7.16C2.862 7.124 2.942 7.07 3.009 7.002L7.55 2.469V3.609C7.55 3.801 7.626 3.984 7.761 4.12C7.897 4.255 8.08 4.331 8.272 4.331C8.463 4.331 8.647 4.255 8.782 4.12C8.918 3.984 8.994 3.801 8.994 3.609V0.722C8.994 0.53 8.918 0.347 8.782 0.211C8.647 0.076 8.463 0 8.272 0H5.384C5.193 0 5.009 0.076 4.874 0.211C4.739 0.347 4.662 0.53 4.662 0.722C4.662 0.913 4.739 1.097 4.874 1.232C5.009 1.368 5.193 1.444 5.384 1.444Z"
+                        fill="#0D3730"
+                        transform="translate(2, 2)"
+                      />
+                    </svg>
+                  </div>
+
+                  <!-- Text Content -->
+                  <div class="pr-12">
+                    <h4 class="text-gold text-sm font-normal mb-2">
+                      // Commercial
+                    </h4>
+                    <p class="text-gold text-sm font-medium leading-tight">
+                      Modern Office
+                    </p>
+                    <p class="text-gold text-sm font-medium leading-tight">
+                      Space Design
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="relative overflow-hidden group cursor-pointer">
+              <div class="relative h-[364px]">
+                <img
+                  src="/assets/images/interior.png"
+                  alt="Hospitality Design"
+                  class="w-full h-full object-cover"
+                />
+
+                <div class="absolute bottom-0 left-0 w-[80%] bg-dark-green p-6">
+                  <!-- Link Icon at top-right of green box -->
+                  <div
+                    class="absolute top-4 right-4 w-[29px] h-[30px] bg-gold flex items-center justify-center group-hover:bg-white transition-colors duration-300"
+                  >
+                    <svg
+                      width="12"
+                      height="12"
+                      viewBox="0 0 12 12"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M8.272 5.775C8.08 5.775 7.897 5.851 7.761 5.986C7.626 6.122 7.55 6.305 7.55 6.497V10.828C7.55 11.02 7.474 11.203 7.339 11.339C7.203 11.474 7.02 11.55 6.828 11.55H-1.834C-2.026 11.55 -2.209 11.474 -2.345 11.339C-2.48 11.203 -2.556 11.02 -2.556 10.828V2.166C-2.556 1.974 -2.48 1.791 -2.345 1.655C-2.209 1.52 -2.026 1.444 -1.834 1.444H2.497C2.688 1.444 2.872 1.368 3.007 1.232C3.143 1.097 3.219 0.913 3.219 0.722C3.219 0.53 3.143 0.347 3.007 0.211C2.872 0.076 2.688 0 2.497 0H-1.834C-2.409 0 -2.96 0.228 -3.366 0.634C-3.772 1.04 -4 1.591 -4 2.166V10.828C-4 11.402 -3.772 11.953 -3.366 12.359C-2.96 12.766 -2.409 12.994 -1.834 12.994H6.828C7.402 12.994 7.953 12.766 8.359 12.359C8.766 11.953 8.994 11.402 8.994 10.828V6.497C8.994 6.305 8.918 6.122 8.782 5.986C8.647 5.851 8.463 5.775 8.272 5.775Z"
+                        fill="#0D3730"
+                        transform="translate(2, 2)"
+                      />
+                      <path
+                        d="M5.384 1.444H6.525L1.984 5.977C1.917 6.044 1.863 6.124 1.826 6.212C1.79 6.3 1.771 6.394 1.771 6.49C1.771 6.585 1.79 6.679 1.826 6.767C1.863 6.855 1.917 6.935 1.984 7.002C2.051 7.07 2.131 7.124 2.219 7.16C2.307 7.197 2.402 7.216 2.497 7.216C2.592 7.216 2.686 7.197 2.774 7.16C2.862 7.124 2.942 7.07 3.009 7.002L7.55 2.469V3.609C7.55 3.801 7.626 3.984 7.761 4.12C7.897 4.255 8.08 4.331 8.272 4.331C8.463 4.331 8.647 4.255 8.782 4.12C8.918 3.984 8.994 3.801 8.994 3.609V0.722C8.994 0.53 8.918 0.347 8.782 0.211C8.647 0.076 8.463 0 8.272 0H5.384C5.193 0 5.009 0.076 4.874 0.211C4.739 0.347 4.662 0.53 4.662 0.722C4.662 0.913 4.739 1.097 4.874 1.232C5.009 1.368 5.193 1.444 5.384 1.444Z"
+                        fill="#0D3730"
+                        transform="translate(2, 2)"
+                      />
+                    </svg>
+                  </div>
+
+                  <!-- Text Content -->
+                  <div class="pr-12">
+                    <h4 class="text-gold text-sm font-normal mb-2">
+                      // Hospitality
+                    </h4>
+                    <p class="text-gold text-sm font-medium leading-tight">
+                      Luxury Hotel
+                    </p>
+                    <p class="text-gold text-sm font-medium leading-tight">
+                      Interior Design
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="relative overflow-hidden group cursor-pointer">
+              <div class="relative h-[364px]">
+                <img
+                  src="/assets/images/interior.png"
+                  alt="Retail Design"
+                  class="w-full h-full object-cover"
+                />
+
+                <div class="absolute bottom-0 left-0 w-[80%] bg-dark-green p-6">
+                  <!-- Link Icon at top-right of green box -->
+                  <div
+                    class="absolute top-4 right-4 w-[29px] h-[30px] bg-gold flex items-center justify-center group-hover:bg-white transition-colors duration-300"
+                  >
+                    <svg
+                      width="12"
+                      height="12"
+                      viewBox="0 0 12 12"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M8.272 5.775C8.08 5.775 7.897 5.851 7.761 5.986C7.626 6.122 7.55 6.305 7.55 6.497V10.828C7.55 11.02 7.474 11.203 7.339 11.339C7.203 11.474 7.02 11.55 6.828 11.55H-1.834C-2.026 11.55 -2.209 11.474 -2.345 11.339C-2.48 11.203 -2.556 11.02 -2.556 10.828V2.166C-2.556 1.974 -2.48 1.791 -2.345 1.655C-2.209 1.52 -2.026 1.444 -1.834 1.444H2.497C2.688 1.444 2.872 1.368 3.007 1.232C3.143 1.097 3.219 0.913 3.219 0.722C3.219 0.53 3.143 0.347 3.007 0.211C2.872 0.076 2.688 0 2.497 0H-1.834C-2.409 0 -2.96 0.228 -3.366 0.634C-3.772 1.04 -4 1.591 -4 2.166V10.828C-4 11.402 -3.772 11.953 -3.366 12.359C-2.96 12.766 -2.409 12.994 -1.834 12.994H6.828C7.402 12.994 7.953 12.766 8.359 12.359C8.766 11.953 8.994 11.402 8.994 10.828V6.497C8.994 6.305 8.918 6.122 8.782 5.986C8.647 5.851 8.463 5.775 8.272 5.775Z"
+                        fill="#0D3730"
+                        transform="translate(2, 2)"
+                      />
+                      <path
+                        d="M5.384 1.444H6.525L1.984 5.977C1.917 6.044 1.863 6.124 1.826 6.212C1.79 6.3 1.771 6.394 1.771 6.49C1.771 6.585 1.79 6.679 1.826 6.767C1.863 6.855 1.917 6.935 1.984 7.002C2.051 7.07 2.131 7.124 2.219 7.16C2.307 7.197 2.402 7.216 2.497 7.216C2.592 7.216 2.686 7.197 2.774 7.16C2.862 7.124 2.942 7.07 3.009 7.002L7.55 2.469V3.609C7.55 3.801 7.626 3.984 7.761 4.12C7.897 4.255 8.08 4.331 8.272 4.331C8.463 4.331 8.647 4.255 8.782 4.12C8.918 3.984 8.994 3.801 8.994 3.609V0.722C8.994 0.53 8.918 0.347 8.782 0.211C8.647 0.076 8.463 0 8.272 0H5.384C5.193 0 5.009 0.076 4.874 0.211C4.739 0.347 4.662 0.53 4.662 0.722C4.662 0.913 4.739 1.097 4.874 1.232C5.009 1.368 5.193 1.444 5.384 1.444Z"
+                        fill="#0D3730"
+                        transform="translate(2, 2)"
+                      />
+                    </svg>
+                  </div>
+
+                  <!-- Text Content -->
+                  <div class="pr-12">
+                    <h4 class="text-gold text-sm font-normal mb-2">
+                      // Retail
+                    </h4>
+                    <p class="text-gold text-sm font-medium leading-tight">
+                      Modern Retail
+                    </p>
+                    <p class="text-gold text-sm font-medium leading-tight">
+                      Store Design
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============================================== -->
+      <!-- ✨      Contact Us Section                       ✨ -->
+      <!-- ============================================== -->
+      <div class="">
+        <div class="text-center text-[15px]">Contact Us</div>
+        <div class="flex w-full justify-center mt-[21px]">
+          <div class="bg-gold w-[55px] h-[3px]"></div>
+        </div>
+        <div
+          class="box bg-dark-green px-4 py-10 md:px-10 md:py-16 xl:p-[70px] pb-[100px] mt-[58px]"
+        >
+          <div class="grid grid-cols-1 lg:grid-cols-2 border border-gold">
+            <div
+              class="pt-[68px] pb-[35px] px-4 md:px-10 lg:pl-[38px] lg:pr-[27px] border-r border-opacity-50 border-gold"
+            >
+              <h3 class="text-center text-[30px] mb-10">Let's Get in touch!</h3>
+              <form class="grid gap-[25px]">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-[21px]">
+                  <input
+                    type="text"
+                    placeholder="Enter Your Name"
+                    class="bg-white/20 border-[0.5px] border-gold text-gold placeholder-gold focus:outline-none placeholder:text-xs pt-[22px] pb-[25px] px-[19px] h-[55px]"
+                  />
+                  <input
+                    type="tel"
+                    placeholder="Enter Your Mobile Number"
+                    class="bg-white/20 border-[0.5px] border-gold text-gold placeholder-gold focus:outline-none placeholder:text-xs pt-[22px] pb-[25px] px-[19px] h-[55px]"
+                  />
+                </div>
+                <div>
+                  <input
+                    type="email"
+                    placeholder="Enter Your Email Address"
+                    class="bg-white/20 w-full border-[0.5px] border-gold text-gold placeholder-gold focus:outline-none placeholder:text-xs pt-[22px] pb-[25px] px-[19px] h-[55px]"
+                  />
+                </div>
+                <div>
+                  <textarea
+                    placeholder="Type Your Message Here"
+                    class="bg-white/20 w-full h-[139px] border-[0.5px] border-gold text-gold placeholder-gold focus:outline-none placeholder:text-xs pt-[22px] pb-[25px] px-[19px]"
+                  ></textarea>
+                </div>
+                <div class="flex justify-center">
+                  <button
+                    class="w-[120px] text-black text-[15px] h-[38px] bg-gold uppercase"
+                  >
+                    Submit
+                  </button>
+                </div>
+              </form>
+            </div>
+            <div class="pt-[68px] pb-[35px] pl-[33px] pr-[27px]">
+              <h3 class="text-[30px] mb-[43px]">Contact Information</h3>
+              <div class="flex gap-4">
+                <img
+                  src="/assets/icons/phone.svg"
+                  alt="Phone Icon"
+                  class="size-6"
+                />
+                <div class="text-lg lg:text-[23px] -mt-1.5">
+                  <p class="font-medium mb-[10px]">Mobile</p>
+                  <p
+                    style="font-weight: 300 !important"
+                    class="mb-[15px]"
+                  >
+                    1 234 567 890
+                  </p>
+                </div>
+              </div>
+              <div class="flex gap-4">
+                <img
+                  src="/assets/icons/envelop.svg"
+                  alt="Phone Icon"
+                  class="size-6"
+                />
+                <div class="text-lg lg:text-[23px] -mt-1.5">
+                  <p class="font-medium mb-[10px]">E-mail</p>
+                  <p
+                    style="font-weight: 300 !important"
+                    class="mb-[20px]"
+                  >
+                    you@company.com
+                  </p>
+                </div>
+              </div>
+              <div class="flex gap-4">
+                <img
+                  src="/assets/icons/location.svg"
+                  alt="Phone Icon"
+                  class="size-6"
+                />
+                <div class="text-lg lg:text-[23px] -mt-1.5">
+                  <p class="font-medium mb-[10px]">Address</p>
+                  <p
+                    style="font-weight: 300 !important"
+                    class="mb-[10px]"
+                  >
+                    Ringroad, Shyamoli
+                  </p>
+                  <p
+                    style="font-weight: 300 !important"
+                    class="mb-[10px]"
+                  >
+                    Dhaka, 1212
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============================================== -->
+      <!-- ✨      Locaton Map Section                       ✨ -->
+      <!-- ============================================== -->
+      <div class="pt-[53px]">
+        <div class="box">
+          <div
+            class="border-[0.3px] border-opacity-50 border-dashed border-gold p-[17px]"
+          >
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d29205.791083482407!2d90.35776!3d23.7928448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1757435532937!5m2!1sen!2sbd"
+              width="100%"
+              class="h-[400px] md:h-[600px] xl:h-[760px]"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============================================== -->
+      <!-- ✨      Our Story Section                       ✨ -->
+      <!-- ============================================== -->
+      <div class="box bg-dark-green mt-[57px] pb-[70px]">
         <h3
-          class="font-normal sm:font-medium text-[30px] sm:text-[45px] leading-[100%] sm:leading-[108%] tracking-[0.0em sm:tracking-[0.0em] text-gold mb-12"
+          class="font-normal sm:font-medium text-[30px] sm:text-[45px] leading-[100%] sm:leading-[108%] tracking-[0.0em sm:tracking-[0.0em] text-gold pb-[41px] pt-[70px] text-center"
         >
-          Our Process
+          Our Story
         </h3>
-        <p class="text-gold">
-          Lorem ipsum is a dummy or placeholder text commonly used in graphic
-          design, publishing, and web development.
-        </p>
+        <div class="max-w-[864px] mx-auto px-4 xl:px-0 grid gap-y-[56px]">
+          <p class="text-center">
+            Lorem ipsum is a dummy or placeholder text commonly used in graphic
+            design, publishing, and web development. Lorem ipsum is a dummy or
+            placeholder text commonly use Lorem ipsum is a dummy or placeholder
+            text commonly use
+          </p>
+          <p class="text-center">
+            Lorem ipsum is a dummy or placeholder text commonly used in graphic
+            design, publishing, and web development. Lorem ipsum is a dummy or
+            placeholder text commonly use Lorem ipsum is a dummy or placeholder
+            text commonly use
+          </p>
+          <p class="text-center">
+            Lorem ipsum is a dummy or placeholder text commonly used in graphic
+            design, publishing, and web development. Lorem ipsum is a dummy or
+            placeholder text commonly use Lorem ipsum is a dummy or placeholder
+            text commonly use
+          </p>
+        </div>
 
-        <div
-          class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-6 mt-12"
-        >
-          <div
-            class="border border-gold flex items-center justify-between gap-1 md:gap-3"
-          >
-            <div
-              class="px-2 text-xs sm:text-base md:px-5 text-start font-medium lg:text-lg"
-            >
-              <p>Meet &</p>
-              <p>Greet</p>
+        <div class="pt-[92px] max-w-[750px] mx-auto px-4 xl:px-0">
+          <div class="grid grid-cols-3 gap-4">
+            <div class="flex flex-col items-center">
+              <div
+                class="border border-opacity-50 border-gold flex items-center justify-center w-24 h-20 sm:w-28 sm:h-24 lg:w-[150px] lg:h-[118px]"
+              >
+                <h2
+                  class="text-2xl sm:text-4xl lg:text-[55px] font-light text-white"
+                >
+                  12+
+                </h2>
+              </div>
+              <p
+                class="mt-[17px] font-medium text-sm text-center md:text-base lg:text-[20px]"
+              >
+                Years of Experience
+              </p>
             </div>
-            <img
-              src="/assets/icons/meet-greet.png"
-              alt=""
-              class="w-[50px] sm:w-[80px] sm:h-[75px] lg:w-[100px] lg:h-[90px]"
-            />
-          </div>
-          <div
-            class="border border-gold flex items-center justify-between gap-1 md:gap-3"
-          >
-            <div
-              class="px-2 text-xs sm:text-base md:px-5 text-start font-medium lg:text-lg"
-            >
-              <p>Design</p>
-              <p>Development</p>
+            <div class="flex flex-col items-center">
+              <div
+                class="border border-opacity-50 border-gold flex items-center justify-center w-24 h-20 sm:w-28 sm:h-24 lg:w-[150px] lg:h-[118px]"
+              >
+                <h2
+                  class="text-2xl sm:text-4xl lg:text-[55px] font-light text-white"
+                >
+                  100+
+                </h2>
+              </div>
+              <p
+                class="mt-[17px] font-medium text-sm text-center md:text-base lg:text-[20px]"
+              >
+                Happy Clients
+              </p>
             </div>
-            <img
-              src="/assets/icons/meet-greet.png"
-              alt=""
-              class="w-[50px] sm:w-[80px] sm:h-[75px] lg:w-[100px] lg:h-[90px]"
-            />
-          </div>
-          <div
-            class="border border-gold flex items-center justify-between gap-1 md:gap-3"
-          >
-            <div
-              class="px-2 text-xs sm:text-base md:px-5 text-start font-medium lg:text-lg"
-            >
-              <p>Place</p>
-              <p>the Order</p>
+            <div class="flex flex-col items-center">
+              <div
+                class="border border-opacity-50 border-gold flex items-center justify-center w-24 h-20 sm:w-28 sm:h-24 lg:w-[150px] lg:h-[118px]"
+              >
+                <h2
+                  class="text-2xl sm:text-4xl lg:text-[55px] font-light text-white"
+                >
+                  300+
+                </h2>
+              </div>
+              <p
+                class="mt-[17px] font-medium text-sm text-center md:text-base lg:text-[20px]"
+              >
+                Projects
+              </p>
             </div>
-            <img
-              src="/assets/icons/meet-greet.png"
-              alt=""
-              class="w-[50px] sm:w-[80px] sm:h-[75px] lg:w-[100px] lg:h-[90px]"
-            />
-          </div>
-          <div
-            class="border border-gold flex items-center justify-between gap-1 md:gap-3"
-          >
-            <div
-              class="px-2 text-xs sm:text-base md:px-5 text-start font-medium lg:text-lg"
-            >
-              <p>Installation</p>
-              <p>Process</p>
-            </div>
-            <img
-              src="/assets/icons/meet-greet.png"
-              alt=""
-              class="w-[50px] sm:w-[80px] sm:h-[75px] lg:w-[100px] lg:h-[90px]"
-            />
-          </div>
-          <div
-            class="border border-gold flex items-center justify-between gap-1 md:gap-3"
-          >
-            <div
-              class="px-2 text-xs sm:text-base md:px-5 text-start font-medium lg:text-lg"
-            >
-              <p>Moving In</p>
-            </div>
-            <img
-              src="/assets/icons/meet-greet.png"
-              alt=""
-              class="w-[50px] sm:w-[80px] sm:h-[75px] lg:w-[100px] lg:h-[90px]"
-            />
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- ============================================== -->
-    <!-- ✨      Why Choose Us Section               ✨ -->
-    <!-- ============================================== -->
-    <div class="bg-dark-green relative overflow-hidden">
-      <div class="box pt-32 lg:pt-[200px] pb-[90px] relative">
-        <div class="grid grid-cols-1 xl:grid-cols-2 gap-10 xl:gap-5">
-          <div>
+      <!-- ============================================== -->
+      <!-- ✨      Our Mission Vission Section         ✨ -->
+      <!-- ============================================== -->
+      <div class="mt-[69px] lg:border-t lg:border-b border-gold">
+        <div class="box grid grid-cols-1 lg:grid-cols-2">
+          <div
+            class="px-4 pt-[70px] lg:pr-12 lg:pb-[163px] lg:border-r lg:border-gold"
+          >
             <h3
-              class="font-normal sm:font-medium text-[30px] sm:text-[45px] leading-[100%] sm:leading-[108%] tracking-[0.0em sm:tracking-[0.0em] mb-10"
+              class="font-normal sm:font-medium text-[30px] sm:text-[45px] leading-[100%] sm:leading-[108%] tracking-[0.0em sm:tracking-[0.0em] text-gold"
             >
-              Why Choose Us
+              Our Mission
             </h3>
-            <p>
+            <p class="mt-10">
               Lorem ipsum is a dummy or placeholder text commonly used in
-              graphic design, publishing, and web development.
+              graphic design, publishing, and web development. Lorem ipsum is a
+              dummy or placeholder text commonly use Lorem ipsum is a dummy or
+              placeholder text commonly use
+              <br />
+              <br />
+              Lorem ipsum is a dummy or placeholder text commonly used in
+              graphic design, publishing, and web development. Lorem ipsum is a
+              dummy or placeholder text commonly use Lorem ipsum is a dummy or
+              placeholder text commonly use
             </p>
           </div>
-          <div
-            class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-3 gap-4 md:gap-7"
-          >
-            <div class="flex flex-col gap-4">
-              <div
-                class="border border-gold hover:border-white p-4 flex items-center justify-center"
-              >
-                <img
-                  src="/assets/icons/premium-materials.svg"
-                  alt=""
-                  class="max-w-[65px] max-h-[60px]"
-                />
-                .
-              </div>
-              <p class="text-center">Premium Materials</p>
-            </div>
-            <div class="flex flex-col gap-4">
-              <div
-                class="border border-gold hover:border-white p-4 flex items-center justify-center"
-              >
-                <img
-                  src="/assets/icons/innovative-designs.svg"
-                  alt=""
-                  class="max-w-[65px] max-h-[60px]"
-                />
-                .
-              </div>
-              <p class="text-center">Innovative Designs</p>
-            </div>
-            <div class="flex flex-col gap-4">
-              <div
-                class="border border-gold hover:border-white p-4 flex items-center justify-center"
-              >
-                <img
-                  src="/assets/icons/client-centric.svg"
-                  alt=""
-                  class="max-w-[65px] max-h-[60px]"
-                />
-                .
-              </div>
-              <p class="text-center">Client-Centric Approach</p>
-            </div>
-            <div class="flex flex-col gap-4">
-              <div
-                class="border border-gold hover:border-white p-4 flex items-center justify-center"
-              >
-                <img
-                  src="/assets/icons/affordable-luxury.svg"
-                  alt=""
-                  class="max-w-[65px] max-h-[60px]"
-                />
-                .
-              </div>
-              <p class="text-center">Affordable Luxury</p>
-            </div>
-            <div class="flex flex-col gap-4">
-              <div
-                class="border border-gold hover:border-white p-4 flex items-center justify-center"
-              >
-                <img
-                  src="/assets/icons/sustainability.svg"
-                  alt=""
-                  class="max-w-[65px] max-h-[60px]"
-                />
-                .
-              </div>
-              <p class="text-center">Sustainability Smart Interiors</p>
-            </div>
-            <div class="flex flex-col gap-4">
-              <div
-                class="border border-gold hover:border-white p-4 flex items-center justify-center"
-              >
-                <img
-                  src="/assets/icons/expert-craftsmanship.svg"
-                  alt=""
-                  class="max-w-[65px] max-h-[60px]"
-                />
-                .
-              </div>
-              <p class="text-center">Expert Craftsmanship</p>
-            </div>
+          <div class="pt-[70px] px-4 lg:pl-12 pb-[163px]">
+            <h3
+              class="font-normal sm:font-medium text-[30px] sm:text-[45px] leading-[100%] sm:leading-[108%] tracking-[0.0em sm:tracking-[0.0em] text-gold"
+            >
+              Our Vision
+            </h3>
+            <p class="mt-10">
+              Lorem ipsum is a dummy or placeholder text commonly used in
+              graphic design, publishing, and web development. Lorem ipsum is a
+              dummy or placeholder text commonly use Lorem ipsum is a dummy or
+              placeholder text commonly use
+              <br />
+              <br />
+              Lorem ipsum is a dummy or placeholder text commonly used in
+              graphic design, publishing, and web development. Lorem ipsum is a
+              dummy or placeholder text commonly use Lorem ipsum is a dummy or
+              placeholder text commonly use
+            </p>
           </div>
         </div>
       </div>
-      <!-- Vertical dashed stripes -->
-      <div
-        class="absolute inset-0 opacity-[8%]"
-        style="
-          background-image: repeating-linear-gradient(
-            90deg,
-            transparent 0px,
-            transparent 122px,
-            #cead73 122px,
-            #cead73 123px,
-            transparent 123px,
-            transparent 245px
-          );
-          background-size: 245px 100%;
-          mask-image: repeating-linear-gradient(
-            0deg,
-            #000 0px,
-            #000 8px,
-            transparent 8px,
-            transparent 16px
-          );
-          -webkit-mask-image: repeating-linear-gradient(
-            0deg,
-            #000 0px,
-            #000 8px,
-            transparent 8px,
-            transparent 16px
-          );
-        "
-      ></div>
-      <!-- Horizontal dashed stripes -->
-      <div
-        class="absolute inset-0 opacity-[8%]"
-        style="
-          background-image: repeating-linear-gradient(
-            0deg,
-            transparent 0px,
-            transparent 97px,
-            #cead73 97px,
-            #cead73 98px,
-            transparent 98px,
-            transparent 195px
-          );
-          background-size: 100% 195px;
-          mask-image: repeating-linear-gradient(
-            90deg,
-            #000 0px,
-            #000 8px,
-            transparent 8px,
-            transparent 16px
-          );
-          -webkit-mask-image: repeating-linear-gradient(
-            90deg,
-            #000 0px,
-            #000 8px,
-            transparent 8px,
-            transparent 16px
-          );
-        "
-      ></div>
-    </div>
 
-    <!-- ============================================== -->
-    <!-- ✨      Services Section                       ✨ -->
-    <!-- ============================================== -->
-    <div class="">
-      <div class="box pt-2 pb-[117px]">
-        <div
-          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-8 mt-16"
+      <!-- ============================================== -->
+      <!-- ✨      Our Team Section                       ✨ -->
+      <!-- ============================================== -->
+      <div class="box mt-[148px] mb-[273px]">
+        <h3
+          class="font-normal sm:font-medium text-[30px] sm:text-[45px] leading-[100%] sm:leading-[108%] tracking-[0.0em sm:tracking-[0.0em] text-gold text-center pb-[26px]"
         >
-          <div class="relative overflow-hidden group cursor-pointer">
-            <div class="relative h-[364px]">
-              <img
-                src="/assets/images/interior.png"
-                alt="Residential Design"
-                class="w-full h-full object-cover"
-              />
-
-              <div class="absolute bottom-0 left-0 w-[80%] bg-dark-green p-6">
-                <!-- Link Icon at top-right of green box -->
-                <div
-                  class="absolute top-4 right-4 w-[29px] h-[30px] bg-gold flex items-center justify-center group-hover:bg-white transition-colors duration-300"
-                >
-                  <svg
-                    width="12"
-                    height="12"
-                    viewBox="0 0 12 12"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M8.272 5.775C8.08 5.775 7.897 5.851 7.761 5.986C7.626 6.122 7.55 6.305 7.55 6.497V10.828C7.55 11.02 7.474 11.203 7.339 11.339C7.203 11.474 7.02 11.55 6.828 11.55H-1.834C-2.026 11.55 -2.209 11.474 -2.345 11.339C-2.48 11.203 -2.556 11.02 -2.556 10.828V2.166C-2.556 1.974 -2.48 1.791 -2.345 1.655C-2.209 1.52 -2.026 1.444 -1.834 1.444H2.497C2.688 1.444 2.872 1.368 3.007 1.232C3.143 1.097 3.219 0.913 3.219 0.722C3.219 0.53 3.143 0.347 3.007 0.211C2.872 0.076 2.688 0 2.497 0H-1.834C-2.409 0 -2.96 0.228 -3.366 0.634C-3.772 1.04 -4 1.591 -4 2.166V10.828C-4 11.402 -3.772 11.953 -3.366 12.359C-2.96 12.766 -2.409 12.994 -1.834 12.994H6.828C7.402 12.994 7.953 12.766 8.359 12.359C8.766 11.953 8.994 11.402 8.994 10.828V6.497C8.994 6.305 8.918 6.122 8.782 5.986C8.647 5.851 8.463 5.775 8.272 5.775Z"
-                      fill="#0D3730"
-                      transform="translate(2, 2)"
-                    />
-                    <path
-                      d="M5.384 1.444H6.525L1.984 5.977C1.917 6.044 1.863 6.124 1.826 6.212C1.79 6.3 1.771 6.394 1.771 6.49C1.771 6.585 1.79 6.679 1.826 6.767C1.863 6.855 1.917 6.935 1.984 7.002C2.051 7.07 2.131 7.124 2.219 7.16C2.307 7.197 2.402 7.216 2.497 7.216C2.592 7.216 2.686 7.197 2.774 7.16C2.862 7.124 2.942 7.07 3.009 7.002L7.55 2.469V3.609C7.55 3.801 7.626 3.984 7.761 4.12C7.897 4.255 8.08 4.331 8.272 4.331C8.463 4.331 8.647 4.255 8.782 4.12C8.918 3.984 8.994 3.801 8.994 3.609V0.722C8.994 0.53 8.918 0.347 8.782 0.211C8.647 0.076 8.463 0 8.272 0H5.384C5.193 0 5.009 0.076 4.874 0.211C4.739 0.347 4.662 0.53 4.662 0.722C4.662 0.913 4.739 1.097 4.874 1.232C5.009 1.368 5.193 1.444 5.384 1.444Z"
-                      fill="#0D3730"
-                      transform="translate(2, 2)"
-                    />
-                  </svg>
-                </div>
-
-                <!-- Text Content -->
-                <div class="pr-12">
-                  <h4 class="text-gold text-sm font-normal mb-2">
-                    // Residential
-                  </h4>
-                  <p class="text-gold text-sm font-medium leading-tight">
-                    Luxury Residential
-                  </p>
-                  <p class="text-gold text-sm font-medium leading-tight">
-                    Apartment Design
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="relative overflow-hidden group cursor-pointer">
-            <div class="relative h-[364px]">
-              <img
-                src="/assets/images/interior.png"
-                alt="Commercial Design"
-                class="w-full h-full object-cover"
-              />
-
-              <div class="absolute bottom-0 left-0 w-[80%] bg-dark-green p-6">
-                <!-- Link Icon at top-right of green box -->
-                <div
-                  class="absolute top-4 right-4 w-[29px] h-[30px] bg-gold flex items-center justify-center group-hover:bg-white transition-colors duration-300"
-                >
-                  <svg
-                    width="12"
-                    height="12"
-                    viewBox="0 0 12 12"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M8.272 5.775C8.08 5.775 7.897 5.851 7.761 5.986C7.626 6.122 7.55 6.305 7.55 6.497V10.828C7.55 11.02 7.474 11.203 7.339 11.339C7.203 11.474 7.02 11.55 6.828 11.55H-1.834C-2.026 11.55 -2.209 11.474 -2.345 11.339C-2.48 11.203 -2.556 11.02 -2.556 10.828V2.166C-2.556 1.974 -2.48 1.791 -2.345 1.655C-2.209 1.52 -2.026 1.444 -1.834 1.444H2.497C2.688 1.444 2.872 1.368 3.007 1.232C3.143 1.097 3.219 0.913 3.219 0.722C3.219 0.53 3.143 0.347 3.007 0.211C2.872 0.076 2.688 0 2.497 0H-1.834C-2.409 0 -2.96 0.228 -3.366 0.634C-3.772 1.04 -4 1.591 -4 2.166V10.828C-4 11.402 -3.772 11.953 -3.366 12.359C-2.96 12.766 -2.409 12.994 -1.834 12.994H6.828C7.402 12.994 7.953 12.766 8.359 12.359C8.766 11.953 8.994 11.402 8.994 10.828V6.497C8.994 6.305 8.918 6.122 8.782 5.986C8.647 5.851 8.463 5.775 8.272 5.775Z"
-                      fill="#0D3730"
-                      transform="translate(2, 2)"
-                    />
-                    <path
-                      d="M5.384 1.444H6.525L1.984 5.977C1.917 6.044 1.863 6.124 1.826 6.212C1.79 6.3 1.771 6.394 1.771 6.49C1.771 6.585 1.79 6.679 1.826 6.767C1.863 6.855 1.917 6.935 1.984 7.002C2.051 7.07 2.131 7.124 2.219 7.16C2.307 7.197 2.402 7.216 2.497 7.216C2.592 7.216 2.686 7.197 2.774 7.16C2.862 7.124 2.942 7.07 3.009 7.002L7.55 2.469V3.609C7.55 3.801 7.626 3.984 7.761 4.12C7.897 4.255 8.08 4.331 8.272 4.331C8.463 4.331 8.647 4.255 8.782 4.12C8.918 3.984 8.994 3.801 8.994 3.609V0.722C8.994 0.53 8.918 0.347 8.782 0.211C8.647 0.076 8.463 0 8.272 0H5.384C5.193 0 5.009 0.076 4.874 0.211C4.739 0.347 4.662 0.53 4.662 0.722C4.662 0.913 4.739 1.097 4.874 1.232C5.009 1.368 5.193 1.444 5.384 1.444Z"
-                      fill="#0D3730"
-                      transform="translate(2, 2)"
-                    />
-                  </svg>
-                </div>
-
-                <!-- Text Content -->
-                <div class="pr-12">
-                  <h4 class="text-gold text-sm font-normal mb-2">
-                    // Commercial
-                  </h4>
-                  <p class="text-gold text-sm font-medium leading-tight">
-                    Modern Office
-                  </p>
-                  <p class="text-gold text-sm font-medium leading-tight">
-                    Space Design
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="relative overflow-hidden group cursor-pointer">
-            <div class="relative h-[364px]">
-              <img
-                src="/assets/images/interior.png"
-                alt="Hospitality Design"
-                class="w-full h-full object-cover"
-              />
-
-              <div class="absolute bottom-0 left-0 w-[80%] bg-dark-green p-6">
-                <!-- Link Icon at top-right of green box -->
-                <div
-                  class="absolute top-4 right-4 w-[29px] h-[30px] bg-gold flex items-center justify-center group-hover:bg-white transition-colors duration-300"
-                >
-                  <svg
-                    width="12"
-                    height="12"
-                    viewBox="0 0 12 12"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M8.272 5.775C8.08 5.775 7.897 5.851 7.761 5.986C7.626 6.122 7.55 6.305 7.55 6.497V10.828C7.55 11.02 7.474 11.203 7.339 11.339C7.203 11.474 7.02 11.55 6.828 11.55H-1.834C-2.026 11.55 -2.209 11.474 -2.345 11.339C-2.48 11.203 -2.556 11.02 -2.556 10.828V2.166C-2.556 1.974 -2.48 1.791 -2.345 1.655C-2.209 1.52 -2.026 1.444 -1.834 1.444H2.497C2.688 1.444 2.872 1.368 3.007 1.232C3.143 1.097 3.219 0.913 3.219 0.722C3.219 0.53 3.143 0.347 3.007 0.211C2.872 0.076 2.688 0 2.497 0H-1.834C-2.409 0 -2.96 0.228 -3.366 0.634C-3.772 1.04 -4 1.591 -4 2.166V10.828C-4 11.402 -3.772 11.953 -3.366 12.359C-2.96 12.766 -2.409 12.994 -1.834 12.994H6.828C7.402 12.994 7.953 12.766 8.359 12.359C8.766 11.953 8.994 11.402 8.994 10.828V6.497C8.994 6.305 8.918 6.122 8.782 5.986C8.647 5.851 8.463 5.775 8.272 5.775Z"
-                      fill="#0D3730"
-                      transform="translate(2, 2)"
-                    />
-                    <path
-                      d="M5.384 1.444H6.525L1.984 5.977C1.917 6.044 1.863 6.124 1.826 6.212C1.79 6.3 1.771 6.394 1.771 6.49C1.771 6.585 1.79 6.679 1.826 6.767C1.863 6.855 1.917 6.935 1.984 7.002C2.051 7.07 2.131 7.124 2.219 7.16C2.307 7.197 2.402 7.216 2.497 7.216C2.592 7.216 2.686 7.197 2.774 7.16C2.862 7.124 2.942 7.07 3.009 7.002L7.55 2.469V3.609C7.55 3.801 7.626 3.984 7.761 4.12C7.897 4.255 8.08 4.331 8.272 4.331C8.463 4.331 8.647 4.255 8.782 4.12C8.918 3.984 8.994 3.801 8.994 3.609V0.722C8.994 0.53 8.918 0.347 8.782 0.211C8.647 0.076 8.463 0 8.272 0H5.384C5.193 0 5.009 0.076 4.874 0.211C4.739 0.347 4.662 0.53 4.662 0.722C4.662 0.913 4.739 1.097 4.874 1.232C5.009 1.368 5.193 1.444 5.384 1.444Z"
-                      fill="#0D3730"
-                      transform="translate(2, 2)"
-                    />
-                  </svg>
-                </div>
-
-                <!-- Text Content -->
-                <div class="pr-12">
-                  <h4 class="text-gold text-sm font-normal mb-2">
-                    // Hospitality
-                  </h4>
-                  <p class="text-gold text-sm font-medium leading-tight">
-                    Luxury Hotel
-                  </p>
-                  <p class="text-gold text-sm font-medium leading-tight">
-                    Interior Design
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="relative overflow-hidden group cursor-pointer">
-            <div class="relative h-[364px]">
-              <img
-                src="/assets/images/interior.png"
-                alt="Retail Design"
-                class="w-full h-full object-cover"
-              />
-
-              <div class="absolute bottom-0 left-0 w-[80%] bg-dark-green p-6">
-                <!-- Link Icon at top-right of green box -->
-                <div
-                  class="absolute top-4 right-4 w-[29px] h-[30px] bg-gold flex items-center justify-center group-hover:bg-white transition-colors duration-300"
-                >
-                  <svg
-                    width="12"
-                    height="12"
-                    viewBox="0 0 12 12"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M8.272 5.775C8.08 5.775 7.897 5.851 7.761 5.986C7.626 6.122 7.55 6.305 7.55 6.497V10.828C7.55 11.02 7.474 11.203 7.339 11.339C7.203 11.474 7.02 11.55 6.828 11.55H-1.834C-2.026 11.55 -2.209 11.474 -2.345 11.339C-2.48 11.203 -2.556 11.02 -2.556 10.828V2.166C-2.556 1.974 -2.48 1.791 -2.345 1.655C-2.209 1.52 -2.026 1.444 -1.834 1.444H2.497C2.688 1.444 2.872 1.368 3.007 1.232C3.143 1.097 3.219 0.913 3.219 0.722C3.219 0.53 3.143 0.347 3.007 0.211C2.872 0.076 2.688 0 2.497 0H-1.834C-2.409 0 -2.96 0.228 -3.366 0.634C-3.772 1.04 -4 1.591 -4 2.166V10.828C-4 11.402 -3.772 11.953 -3.366 12.359C-2.96 12.766 -2.409 12.994 -1.834 12.994H6.828C7.402 12.994 7.953 12.766 8.359 12.359C8.766 11.953 8.994 11.402 8.994 10.828V6.497C8.994 6.305 8.918 6.122 8.782 5.986C8.647 5.851 8.463 5.775 8.272 5.775Z"
-                      fill="#0D3730"
-                      transform="translate(2, 2)"
-                    />
-                    <path
-                      d="M5.384 1.444H6.525L1.984 5.977C1.917 6.044 1.863 6.124 1.826 6.212C1.79 6.3 1.771 6.394 1.771 6.49C1.771 6.585 1.79 6.679 1.826 6.767C1.863 6.855 1.917 6.935 1.984 7.002C2.051 7.07 2.131 7.124 2.219 7.16C2.307 7.197 2.402 7.216 2.497 7.216C2.592 7.216 2.686 7.197 2.774 7.16C2.862 7.124 2.942 7.07 3.009 7.002L7.55 2.469V3.609C7.55 3.801 7.626 3.984 7.761 4.12C7.897 4.255 8.08 4.331 8.272 4.331C8.463 4.331 8.647 4.255 8.782 4.12C8.918 3.984 8.994 3.801 8.994 3.609V0.722C8.994 0.53 8.918 0.347 8.782 0.211C8.647 0.076 8.463 0 8.272 0H5.384C5.193 0 5.009 0.076 4.874 0.211C4.739 0.347 4.662 0.53 4.662 0.722C4.662 0.913 4.739 1.097 4.874 1.232C5.009 1.368 5.193 1.444 5.384 1.444Z"
-                      fill="#0D3730"
-                      transform="translate(2, 2)"
-                    />
-                  </svg>
-                </div>
-
-                <!-- Text Content -->
-                <div class="pr-12">
-                  <h4 class="text-gold text-sm font-normal mb-2">// Retail</h4>
-                  <p class="text-gold text-sm font-medium leading-tight">
-                    Modern Retail
-                  </p>
-                  <p class="text-gold text-sm font-medium leading-tight">
-                    Store Design
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- ============================================== -->
-    <!-- ✨      Contact Us Section                       ✨ -->
-    <!-- ============================================== -->
-    <div class="">
-      <div class="text-center text-[15px]">Contact Us</div>
-      <div class="flex w-full justify-center mt-[21px]">
-        <div class="bg-gold w-[55px] h-[3px]"></div>
-      </div>
-      <div
-        class="box bg-dark-green px-4 py-10 md:px-10 md:py-16 xl:p-[70px] pb-[100px] mt-[58px]"
-      >
-        <div class="grid grid-cols-1 lg:grid-cols-2 border border-gold">
-          <div
-            class="pt-[68px] pb-[35px] px-4 md:px-10 lg:pl-[38px] lg:pr-[27px] border-r border-opacity-50 border-gold"
-          >
-            <h3 class="text-center text-[30px] mb-10">Let's Get in touch!</h3>
-            <form class="grid gap-[25px]">
-              <div class="grid grid-cols-1 lg:grid-cols-2 gap-[21px]">
-                <input
-                  type="text"
-                  placeholder="Enter Your Name"
-                  class="bg-white/20 border-[0.5px] border-gold text-gold placeholder-gold focus:outline-none placeholder:text-xs pt-[22px] pb-[25px] px-[19px] h-[55px]"
-                />
-                <input
-                  type="tel"
-                  placeholder="Enter Your Mobile Number"
-                  class="bg-white/20 border-[0.5px] border-gold text-gold placeholder-gold focus:outline-none placeholder:text-xs pt-[22px] pb-[25px] px-[19px] h-[55px]"
-                />
-              </div>
-              <div>
-                <input
-                  type="email"
-                  placeholder="Enter Your Email Address"
-                  class="bg-white/20 w-full border-[0.5px] border-gold text-gold placeholder-gold focus:outline-none placeholder:text-xs pt-[22px] pb-[25px] px-[19px] h-[55px]"
-                />
-              </div>
-              <div>
-                <textarea
-                  placeholder="Type Your Message Here"
-                  class="bg-white/20 w-full h-[139px] border-[0.5px] border-gold text-gold placeholder-gold focus:outline-none placeholder:text-xs pt-[22px] pb-[25px] px-[19px]"
-                ></textarea>
-              </div>
-              <div class="flex justify-center">
-                <button
-                  class="w-[120px] text-black text-[15px] h-[38px] bg-gold uppercase"
-                >
-                  Submit
-                </button>
-              </div>
-            </form>
-          </div>
-          <div class="pt-[68px] pb-[35px] pl-[33px] pr-[27px]">
-            <h3 class="text-[30px] mb-[43px]">Contact Information</h3>
-            <div class="flex gap-4">
-              <img
-                src="/assets/icons/phone.svg"
-                alt="Phone Icon"
-                class="size-6"
-              />
-              <div class="text-lg lg:text-[23px] -mt-1.5">
-                <p class="font-medium mb-[10px]">Mobile</p>
-                <p
-                  style="font-weight: 300 !important"
-                  class="mb-[15px]"
-                >
-                  1 234 567 890
-                </p>
-              </div>
-            </div>
-            <div class="flex gap-4">
-              <img
-                src="/assets/icons/envelop.svg"
-                alt="Phone Icon"
-                class="size-6"
-              />
-              <div class="text-lg lg:text-[23px] -mt-1.5">
-                <p class="font-medium mb-[10px]">E-mail</p>
-                <p
-                  style="font-weight: 300 !important"
-                  class="mb-[20px]"
-                >
-                  you@company.com
-                </p>
-              </div>
-            </div>
-            <div class="flex gap-4">
-              <img
-                src="/assets/icons/location.svg"
-                alt="Phone Icon"
-                class="size-6"
-              />
-              <div class="text-lg lg:text-[23px] -mt-1.5">
-                <p class="font-medium mb-[10px]">Address</p>
-                <p
-                  style="font-weight: 300 !important"
-                  class="mb-[10px]"
-                >
-                  Ringroad, Shyamoli
-                </p>
-                <p
-                  style="font-weight: 300 !important"
-                  class="mb-[10px]"
-                >
-                  Dhaka, 1212
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- ============================================== -->
-    <!-- ✨      Locaton Map Section                       ✨ -->
-    <!-- ============================================== -->
-    <div class="pt-[53px]">
-      <div class="box">
+          Our Team
+        </h3>
+        <p class="font-medium text-[20px] uppercase text-center mb-[94px]">
+          Our Architect
+        </p>
         <div
-          class="border-[0.3px] border-opacity-50 border-dashed border-gold p-[17px]"
+          class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 lg:gap-6"
         >
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d29205.791083482407!2d90.35776!3d23.7928448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1757435532937!5m2!1sen!2sbd"
-            width="100%"
-            class="h-[400px] md:h-[600px] xl:h-[760px]"
-            style="border: 0"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
-        </div>
-      </div>
-    </div>
-
-    <!-- ============================================== -->
-    <!-- ✨      Our Story Section                       ✨ -->
-    <!-- ============================================== -->
-    <div class="box bg-dark-green mt-[57px] pb-[70px]">
-      <h3
-        class="font-normal sm:font-medium text-[30px] sm:text-[45px] leading-[100%] sm:leading-[108%] tracking-[0.0em sm:tracking-[0.0em] text-gold pb-[41px] pt-[70px] text-center"
-      >
-        Our Story
-      </h3>
-      <div class="max-w-[864px] mx-auto px-4 xl:px-0 grid gap-y-[56px]">
-        <p class="text-center">
-          Lorem ipsum is a dummy or placeholder text commonly used in graphic
-          design, publishing, and web development. Lorem ipsum is a dummy or
-          placeholder text commonly use Lorem ipsum is a dummy or placeholder
-          text commonly use
-        </p>
-        <p class="text-center">
-          Lorem ipsum is a dummy or placeholder text commonly used in graphic
-          design, publishing, and web development. Lorem ipsum is a dummy or
-          placeholder text commonly use Lorem ipsum is a dummy or placeholder
-          text commonly use
-        </p>
-        <p class="text-center">
-          Lorem ipsum is a dummy or placeholder text commonly used in graphic
-          design, publishing, and web development. Lorem ipsum is a dummy or
-          placeholder text commonly use Lorem ipsum is a dummy or placeholder
-          text commonly use
-        </p>
-      </div>
-
-      <div class="pt-[92px] max-w-[750px] mx-auto px-4 xl:px-0">
-        <div class="grid grid-cols-3 gap-4">
-          <div class="flex flex-col items-center">
-            <div
-              class="border border-opacity-50 border-gold flex items-center justify-center w-24 h-20 sm:w-28 sm:h-24 lg:w-[150px] lg:h-[118px]"
-            >
-              <h2
-                class="text-2xl sm:text-4xl lg:text-[55px] font-light text-white"
-              >
-                12+
-              </h2>
+          <div class="border-[0.5px] border-opacity-50 border-gold p-5">
+            <div class="bg-dark-green flex justify-center mb-5">
+              <img
+                src="/assets/images/team.png"
+                alt="Team Member"
+                class="xl:w-[226px] xl:h-[304px]"
+              />
             </div>
-            <p
-              class="mt-[17px] font-medium text-sm text-center md:text-base lg:text-[20px]"
-            >
-              Years of Experience
+            <p class="font-semibold lg:text-[25px] text-center xl:font-medium">
+              MD. Royan
+            </p>
+            <p class="font-medium text-center text-xs lg:text-[15px]">
+              Founder & CEO
             </p>
           </div>
-          <div class="flex flex-col items-center">
-            <div
-              class="border border-opacity-50 border-gold flex items-center justify-center w-24 h-20 sm:w-28 sm:h-24 lg:w-[150px] lg:h-[118px]"
-            >
-              <h2
-                class="text-2xl sm:text-4xl lg:text-[55px] font-light text-white"
-              >
-                100+
-              </h2>
+          <div class="border-[0.5px] border-opacity-50 border-gold p-5">
+            <div class="bg-dark-green flex justify-center mb-5">
+              <img
+                src="/assets/images/team.png"
+                alt="Team Member"
+                class="xl:w-[226px] xl:h-[304px]"
+              />
             </div>
-            <p
-              class="mt-[17px] font-medium text-sm text-center md:text-base lg:text-[20px]"
-            >
-              Happy Clients
+            <p class="font-semibold lg:text-[25px] text-center xl:font-medium">
+              MD. Royan
+            </p>
+            <p class="font-medium text-center text-xs lg:text-[15px]">
+              Founder & CEO
             </p>
           </div>
-          <div class="flex flex-col items-center">
-            <div
-              class="border border-opacity-50 border-gold flex items-center justify-center w-24 h-20 sm:w-28 sm:h-24 lg:w-[150px] lg:h-[118px]"
-            >
-              <h2
-                class="text-2xl sm:text-4xl lg:text-[55px] font-light text-white"
-              >
-                300+
-              </h2>
+          <div class="border-[0.5px] border-opacity-50 border-gold p-5">
+            <div class="bg-dark-green flex justify-center mb-5">
+              <img
+                src="/assets/images/team.png"
+                alt="Team Member"
+                class="xl:w-[226px] xl:h-[304px]"
+              />
             </div>
-            <p
-              class="mt-[17px] font-medium text-sm text-center md:text-base lg:text-[20px]"
-            >
-              Projects
+            <p class="font-semibold lg:text-[25px] text-center xl:font-medium">
+              MD. Royan
+            </p>
+            <p class="font-medium text-center text-xs lg:text-[15px]">
+              Founder & CEO
+            </p>
+          </div>
+          <div class="border-[0.5px] border-opacity-50 border-gold p-5">
+            <div class="bg-dark-green flex justify-center mb-5">
+              <img
+                src="/assets/images/team.png"
+                alt="Team Member"
+                class="xl:w-[226px] xl:h-[304px]"
+              />
+            </div>
+            <p class="font-semibold lg:text-[25px] text-center xl:font-medium">
+              MD. Royan
+            </p>
+            <p class="font-medium text-center text-xs lg:text-[15px]">
+              Founder & CEO
             </p>
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- ============================================== -->
-    <!-- ✨      Our Mission Vission Section         ✨ -->
-    <!-- ============================================== -->
-    <div class="mt-[69px] lg:border-t lg:border-b border-gold">
-      <div class="box grid grid-cols-1 lg:grid-cols-2">
-        <div
-          class="px-4 pt-[70px] lg:pr-12 lg:pb-[163px] lg:border-r lg:border-gold"
-        >
-          <h3
-            class="font-normal sm:font-medium text-[30px] sm:text-[45px] leading-[100%] sm:leading-[108%] tracking-[0.0em sm:tracking-[0.0em] text-gold"
-          >
-            Our Mission
-          </h3>
-          <p class="mt-10">
-            Lorem ipsum is a dummy or placeholder text commonly used in graphic
-            design, publishing, and web development. Lorem ipsum is a dummy or
-            placeholder text commonly use Lorem ipsum is a dummy or placeholder
-            text commonly use
-            <br />
-            <br />
-            Lorem ipsum is a dummy or placeholder text commonly used in graphic
-            design, publishing, and web development. Lorem ipsum is a dummy or
-            placeholder text commonly use Lorem ipsum is a dummy or placeholder
-            text commonly use
-          </p>
-        </div>
-        <div class="pt-[70px] px-4 lg:pl-12 pb-[163px]">
-          <h3
-            class="font-normal sm:font-medium text-[30px] sm:text-[45px] leading-[100%] sm:leading-[108%] tracking-[0.0em sm:tracking-[0.0em] text-gold"
-          >
-            Our Vision
-          </h3>
-          <p class="mt-10">
-            Lorem ipsum is a dummy or placeholder text commonly used in graphic
-            design, publishing, and web development. Lorem ipsum is a dummy or
-            placeholder text commonly use Lorem ipsum is a dummy or placeholder
-            text commonly use
-            <br />
-            <br />
-            Lorem ipsum is a dummy or placeholder text commonly used in graphic
-            design, publishing, and web development. Lorem ipsum is a dummy or
-            placeholder text commonly use Lorem ipsum is a dummy or placeholder
-            text commonly use
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <!-- ============================================== -->
-    <!-- ✨      Our Team Section                       ✨ -->
-    <!-- ============================================== -->
-    <div class="box mt-[148px] mb-[273px]">
-      <h3
-        class="font-normal sm:font-medium text-[30px] sm:text-[45px] leading-[100%] sm:leading-[108%] tracking-[0.0em sm:tracking-[0.0em] text-gold text-center pb-[26px]"
-      >
-        Our Team
-      </h3>
-      <p class="font-medium text-[20px] uppercase text-center mb-[94px]">
-        Our Architect
-      </p>
+      <!-- ============================================== -->
+      <!-- ✨      Book Meeting Section                ✨ -->
+      <!-- ============================================== -->
       <div
-        class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 lg:gap-6"
+        class="border border-gold border-opacity-50 max-w-[1162px] mx-auto pt-[38px] pb-[35px]"
       >
-        <div class="border-[0.5px] border-opacity-50 border-gold p-5">
-          <div class="bg-dark-green flex justify-center mb-5">
-            <img
-              src="/assets/images/team.png"
-              alt="Team Member"
-              class="xl:w-[226px] xl:h-[304px]"
+        <h3 class="text-[30px] text-center mb-[39px]">Book a Meeting</h3>
+        <form
+          class="grid gap-[25px] max-w-[827px] px-3 sm:px-4 lg:px-0 mx-auto"
+        >
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-[21px]">
+            <input
+              type="text"
+              placeholder="Enter Your Name"
+              class="bg-white/20 border-[0.5px] border-gold border-opacity-50 text-gold placeholder-gold focus:outline-none placeholder:text-xs pt-[22px] pb-[25px] px-[19px] h-[55px]"
+            />
+            <input
+              type="tel"
+              placeholder="Enter Your Mobile Number"
+              class="bg-white/20 border-[0.5px] border-gold border-opacity-50 text-gold placeholder-gold focus:outline-none placeholder:text-xs pt-[22px] pb-[25px] px-[19px] h-[55px]"
             />
           </div>
-          <p class="font-semibold lg:text-[25px] text-center xl:font-medium">
-            MD. Royan
-          </p>
-          <p class="font-medium text-center text-xs lg:text-[15px]">
-            Founder & CEO
-          </p>
-        </div>
-        <div class="border-[0.5px] border-opacity-50 border-gold p-5">
-          <div class="bg-dark-green flex justify-center mb-5">
-            <img
-              src="/assets/images/team.png"
-              alt="Team Member"
-              class="xl:w-[226px] xl:h-[304px]"
+          <div>
+            <input
+              type="email"
+              placeholder="Enter Your Email Address"
+              class="bg-white/20 w-full border-[0.5px] border-gold border-opacity-50 text-gold placeholder-gold focus:outline-none placeholder:text-xs pt-[22px] pb-[25px] px-[19px] h-[55px]"
             />
           </div>
-          <p class="font-semibold lg:text-[25px] text-center xl:font-medium">
-            MD. Royan
-          </p>
-          <p class="font-medium text-center text-xs lg:text-[15px]">
-            Founder & CEO
-          </p>
-        </div>
-        <div class="border-[0.5px] border-opacity-50 border-gold p-5">
-          <div class="bg-dark-green flex justify-center mb-5">
-            <img
-              src="/assets/images/team.png"
-              alt="Team Member"
-              class="xl:w-[226px] xl:h-[304px]"
-            />
+          <div class="flex justify-center mt-[11px]">
+            <button
+              class="w-[120px] text-black text-[15px] h-[38px] bg-gold uppercase"
+            >
+              Submit
+            </button>
           </div>
-          <p class="font-semibold lg:text-[25px] text-center xl:font-medium">
-            MD. Royan
-          </p>
-          <p class="font-medium text-center text-xs lg:text-[15px]">
-            Founder & CEO
-          </p>
-        </div>
-        <div class="border-[0.5px] border-opacity-50 border-gold p-5">
-          <div class="bg-dark-green flex justify-center mb-5">
-            <img
-              src="/assets/images/team.png"
-              alt="Team Member"
-              class="xl:w-[226px] xl:h-[304px]"
-            />
-          </div>
-          <p class="font-semibold lg:text-[25px] text-center xl:font-medium">
-            MD. Royan
-          </p>
-          <p class="font-medium text-center text-xs lg:text-[15px]">
-            Founder & CEO
+        </form>
+      </div>
+
+      <!-- ============================================== -->
+      <!-- ✨      How We Work Section                  ✨ -->
+      <!-- ============================================== -->
+      <div class="box mt-[93px] mb-[142px]">
+        <h3
+          class="font-normal sm:font-medium text-[30px] sm:text-[45px] leading-[100%] sm:leading-[108%] tracking-[0.0em sm:tracking-[0.0em] text-gold text-center pb-10"
+        >
+          How We Work
+        </h3>
+        <div class="max-w-[826px] mx-auto">
+          <p class="text-center">
+            Lorem ipsum is a dummy or placeholder text commonly used in graphic
+            design, publishing, and web development. Lorem ipsum is a dummy or
+            placeholder text commonly use Lorem ipsum is a dummy or placeholder
+            text commonly use
           </p>
         </div>
       </div>
-    </div>
 
-    <!-- ============================================== -->
-    <!-- ✨      Book Meeting Section                ✨ -->
-    <!-- ============================================== -->
-    <div
-      class="border border-gold border-opacity-50 max-w-[1162px] mx-auto pt-[38px] pb-[35px]"
-    >
-      <h3 class="text-[30px] text-center mb-[39px]">Book a Meeting</h3>
-      <form class="grid gap-[25px] max-w-[827px] px-3 sm:px-4 lg:px-0 mx-auto">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-[21px]">
+      <!-- ============================================== -->
+      <!-- ✨      Development Step Section              ✨ -->
+      <!-- ============================================== -->
+      <div class="bg-dark-green pt-[71px] pb-[65px] px-4 sm:px-8 lg:px-[70px]">
+        <div class="grid grid-cols-1 xl:grid-cols-2 gap-10 xl:gap-5">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-[21px]">
+            <div
+              class="border border-gold border-opacity-50 flex items-center justify-center p-10 md:py-20 lg:py-[93px] lg:px-[101px] relative"
+            >
+              <div
+                class="absolute bg-gold w-[89px] h-[35px] flex items-center justify-center top-0 left-0 text-black font-semibold text-xs"
+              >
+                STEP 1
+              </div>
+              <img
+                src="/assets/icons/group.svg"
+                alt="meet & greet"
+                class="size-[155px]"
+              />
+            </div>
+            <div>
+              <h3
+                class="font-semibold sm:font-medium text-[28px] lg:text-[23px] 2xl:text-[30px] leading-[100%] sm:leading-[108%] tracking-[0.0em sm:tracking-[0.0em] text-gold pb-[18px]"
+              >
+                Meet & Greet
+              </h3>
+              <div
+                class="border-l-[0.5px] border-dashed border-gold border-opacity-70"
+              >
+                <div class="grid gap-6 pt-[15px]">
+                  <div class="flex gap-[15px] items-baseline -ml-[5px]">
+                    <div>
+                      <div class="bg-gold size-[10px] rounded-full"></div>
+                    </div>
+                    <div>
+                      <p
+                        class="mb-2 text-[18px] sm:text-[20px] lg:text-base 2xl:text-[20px] font-semibold"
+                      >
+                        Understanding Your Vision:
+                      </p>
+                      <p
+                        class="text-[15px] line-clamp-2 lg:text-[13px] 2xl:text-[15px]"
+                      >
+                        We listen carefully to your lifestyle, preferences, and
+                        goals to capture the essence.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="flex gap-[15px] items-baseline -ml-[5px]">
+                    <div>
+                      <div class="bg-gold size-[10px] rounded-full"></div>
+                    </div>
+                    <div>
+                      <p
+                        class="mb-2 text-[18px] sm:text-[20px] lg:text-base 2xl:text-[20px] font-semibold"
+                      >
+                        Personal Consultation:
+                      </p>
+                      <p
+                        class="text-[15px] line-clamp-2 lg:text-[13px] 2xl:text-[15px]"
+                      >
+                        One-on-one discussions that allow us to connect and
+                        align with your requirements.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="flex gap-[15px] items-baseline -ml-[5px]">
+                    <div>
+                      <div class="bg-gold size-[10px] rounded-full"></div>
+                    </div>
+                    <div>
+                      <p
+                        class="mb-2 text-[18px] sm:text-[20px] lg:text-base 2xl:text-[20px] font-semibold"
+                      >
+                        Foundation for Design:
+                      </p>
+                      <p
+                        class="text-[15px] line-clamp-2 lg:text-[13px] 2xl:text-[15px]"
+                      >
+                        Every detail we gather becomes the starting point of a
+                        bespoke interior journey.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-[21px]">
+            <div
+              class="border border-gold border-opacity-50 flex items-center justify-center p-10 md:py-20 lg:py-[93px] lg:px-[101px] lg:order-last xl:order-first relative"
+            >
+              <div
+                class="absolute bg-gold w-[89px] h-[35px] flex items-center justify-center top-0 left-0 text-black font-semibold text-xs"
+              >
+                STEP 2
+              </div>
+              <img
+                src="/assets/icons/group.svg"
+                alt="meet & greet"
+                class="size-[155px]"
+              />
+            </div>
+            <div>
+              <h3
+                class="font-semibold sm:font-medium text-[28px] lg:text-[23px] 2xl:text-[30px] leading-[100%] sm:leading-[108%] tracking-[0.0em sm:tracking-[0.0em] text-gold pb-[18px]"
+              >
+                Design Development
+              </h3>
+              <div
+                class="border-l-[0.5px] border-dashed border-gold border-opacity-70"
+              >
+                <div class="grid gap-6 pt-[15px]">
+                  <div class="flex gap-[15px] items-baseline -ml-[5px]">
+                    <div>
+                      <div class="bg-gold size-[10px] rounded-full"></div>
+                    </div>
+                    <div>
+                      <p
+                        class="mb-2 text-[18px] sm:text-[20px] lg:text-base 2xl:text-[20px] font-semibold"
+                      >
+                        Concept Creation:
+                      </p>
+                      <p
+                        class="text-[15px] line-clamp-2 lg:text-[13px] 2xl:text-[15px]"
+                      >
+                        Our designers translate your vision into innovative and
+                        elegant design concepts.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="flex gap-[15px] items-baseline -ml-[5px]">
+                    <div>
+                      <div class="bg-gold size-[10px] rounded-full"></div>
+                    </div>
+                    <div>
+                      <p
+                        class="mb-2 text-[18px] sm:text-[20px] lg:text-base 2xl:text-[20px] font-semibold"
+                      >
+                        Refinement & Detailing:
+                      </p>
+                      <p
+                        class="text-[15px] line-clamp-2 lg:text-[13px] 2xl:text-[15px]"
+                      >
+                        lans are fine-tuned with precision, ensuring the balance
+                        of aesthetics and functionality.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="flex gap-[15px] items-baseline -ml-[5px]">
+                    <div>
+                      <div class="bg-gold size-[10px] rounded-full"></div>
+                    </div>
+                    <div>
+                      <p
+                        class="mb-2 text-[18px] sm:text-[20px] lg:text-base 2xl:text-[20px] font-semibold"
+                      >
+                        Visual Presentation:
+                      </p>
+                      <p
+                        class="text-[15px] line-clamp-2 lg:text-[13px] 2xl:text-[15px]"
+                      >
+                        Mood boards, 3D renderings, and layouts help you
+                        visualize the future space before execution.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============================================== -->
+      <!-- ✨      Newsletter Section              ✨ -->
+      <!-- ============================================== -->
+      <div
+        class="mt-[78px] max-w-[550px] px-4 sm:px-8 mx-auto text-center mb-[500px]"
+      >
+        <h3 class="font-semibold text-[25px] mb-[14px]">
+          Newsletter Subscription
+        </h3>
+        <p class="text-[15px] mb-8">
+          Subscribe to get the latest interior trends
+        </p>
+        <div class="flex">
           <input
             type="text"
-            placeholder="Enter Your Name"
-            class="bg-white/20 border-[0.5px] border-gold border-opacity-50 text-gold placeholder-gold focus:outline-none placeholder:text-xs pt-[22px] pb-[25px] px-[19px] h-[55px]"
+            placeholder="Type Your Email"
+            class="max-w-[394px] w-full text-[15px] pt-[21px] pb-6 px-[18px] text-gold placeholder:text-gold bg-transparent border border-gold focus:outline-none h-[56px]"
           />
-          <input
-            type="tel"
-            placeholder="Enter Your Mobile Number"
-            class="bg-white/20 border-[0.5px] border-gold border-opacity-50 text-gold placeholder-gold focus:outline-none placeholder:text-xs pt-[22px] pb-[25px] px-[19px] h-[55px]"
-          />
-        </div>
-        <div>
-          <input
-            type="email"
-            placeholder="Enter Your Email Address"
-            class="bg-white/20 w-full border-[0.5px] border-gold border-opacity-50 text-gold placeholder-gold focus:outline-none placeholder:text-xs pt-[22px] pb-[25px] px-[19px] h-[55px]"
-          />
-        </div>
-        <div class="flex justify-center mt-[11px]">
           <button
-            class="w-[120px] text-black text-[15px] h-[38px] bg-gold uppercase"
+            class="uppercase h-[56px] w-[156px] font-medium text-[20px] bg-gold text-black"
           >
             Submit
           </button>
         </div>
-      </form>
-    </div>
-
-    <!-- ============================================== -->
-    <!-- ✨      How We Work Section                  ✨ -->
-    <!-- ============================================== -->
-    <div class="box mt-[93px] mb-[142px]">
-      <h3
-        class="font-normal sm:font-medium text-[30px] sm:text-[45px] leading-[100%] sm:leading-[108%] tracking-[0.0em sm:tracking-[0.0em] text-gold text-center pb-10"
-      >
-        How We Work
-      </h3>
-      <div class="max-w-[826px] mx-auto">
-        <p class="text-center">
-          Lorem ipsum is a dummy or placeholder text commonly used in graphic
-          design, publishing, and web development. Lorem ipsum is a dummy or
-          placeholder text commonly use Lorem ipsum is a dummy or placeholder
-          text commonly use
-        </p>
-      </div>
-    </div>
-
-    <!-- ============================================== -->
-    <!-- ✨      Development Step Section              ✨ -->
-    <!-- ============================================== -->
-    <div class="bg-dark-green pt-[71px] pb-[65px] px-4 sm:px-8 lg:px-[70px]">
-      <div class="grid grid-cols-1 xl:grid-cols-2 gap-10 xl:gap-5">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-[21px]">
-          <div
-            class="border border-gold border-opacity-50 flex items-center justify-center p-10 md:py-20 lg:py-[93px] lg:px-[101px] relative"
-          >
-            <div
-              class="absolute bg-gold w-[89px] h-[35px] flex items-center justify-center top-0 left-0 text-black font-semibold text-xs"
-            >
-              STEP 1
-            </div>
-            <img
-              src="/assets/icons/group.svg"
-              alt="meet & greet"
-              class="size-[155px]"
-            />
-          </div>
-          <div>
-            <h3
-              class="font-semibold sm:font-medium text-[28px] lg:text-[23px] 2xl:text-[30px] leading-[100%] sm:leading-[108%] tracking-[0.0em sm:tracking-[0.0em] text-gold pb-[18px]"
-            >
-              Meet & Greet
-            </h3>
-            <div
-              class="border-l-[0.5px] border-dashed border-gold border-opacity-70"
-            >
-              <div class="grid gap-6 pt-[15px]">
-                <div class="flex gap-[15px] items-baseline -ml-[5px]">
-                  <div>
-                    <div class="bg-gold size-[10px] rounded-full"></div>
-                  </div>
-                  <div>
-                    <p
-                      class="mb-2 text-[18px] sm:text-[20px] lg:text-base 2xl:text-[20px] font-semibold"
-                    >
-                      Understanding Your Vision:
-                    </p>
-                    <p
-                      class="text-[15px] line-clamp-2 lg:text-[13px] 2xl:text-[15px]"
-                    >
-                      We listen carefully to your lifestyle, preferences, and
-                      goals to capture the essence.
-                    </p>
-                  </div>
-                </div>
-                <div class="flex gap-[15px] items-baseline -ml-[5px]">
-                  <div>
-                    <div class="bg-gold size-[10px] rounded-full"></div>
-                  </div>
-                  <div>
-                    <p
-                      class="mb-2 text-[18px] sm:text-[20px] lg:text-base 2xl:text-[20px] font-semibold"
-                    >
-                      Personal Consultation:
-                    </p>
-                    <p
-                      class="text-[15px] line-clamp-2 lg:text-[13px] 2xl:text-[15px]"
-                    >
-                      One-on-one discussions that allow us to connect and align
-                      with your requirements.
-                    </p>
-                  </div>
-                </div>
-                <div class="flex gap-[15px] items-baseline -ml-[5px]">
-                  <div>
-                    <div class="bg-gold size-[10px] rounded-full"></div>
-                  </div>
-                  <div>
-                    <p
-                      class="mb-2 text-[18px] sm:text-[20px] lg:text-base 2xl:text-[20px] font-semibold"
-                    >
-                      Foundation for Design:
-                    </p>
-                    <p
-                      class="text-[15px] line-clamp-2 lg:text-[13px] 2xl:text-[15px]"
-                    >
-                      Every detail we gather becomes the starting point of a
-                      bespoke interior journey.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-[21px]">
-          <div
-            class="border border-gold border-opacity-50 flex items-center justify-center p-10 md:py-20 lg:py-[93px] lg:px-[101px] lg:order-last xl:order-first relative"
-          >
-            <div
-              class="absolute bg-gold w-[89px] h-[35px] flex items-center justify-center top-0 left-0 text-black font-semibold text-xs"
-            >
-              STEP 2
-            </div>
-            <img
-              src="/assets/icons/group.svg"
-              alt="meet & greet"
-              class="size-[155px]"
-            />
-          </div>
-          <div>
-            <h3
-              class="font-semibold sm:font-medium text-[28px] lg:text-[23px] 2xl:text-[30px] leading-[100%] sm:leading-[108%] tracking-[0.0em sm:tracking-[0.0em] text-gold pb-[18px]"
-            >
-              Design Development
-            </h3>
-            <div
-              class="border-l-[0.5px] border-dashed border-gold border-opacity-70"
-            >
-              <div class="grid gap-6 pt-[15px]">
-                <div class="flex gap-[15px] items-baseline -ml-[5px]">
-                  <div>
-                    <div class="bg-gold size-[10px] rounded-full"></div>
-                  </div>
-                  <div>
-                    <p
-                      class="mb-2 text-[18px] sm:text-[20px] lg:text-base 2xl:text-[20px] font-semibold"
-                    >
-                      Concept Creation:
-                    </p>
-                    <p
-                      class="text-[15px] line-clamp-2 lg:text-[13px] 2xl:text-[15px]"
-                    >
-                      Our designers translate your vision into innovative and
-                      elegant design concepts.
-                    </p>
-                  </div>
-                </div>
-                <div class="flex gap-[15px] items-baseline -ml-[5px]">
-                  <div>
-                    <div class="bg-gold size-[10px] rounded-full"></div>
-                  </div>
-                  <div>
-                    <p
-                      class="mb-2 text-[18px] sm:text-[20px] lg:text-base 2xl:text-[20px] font-semibold"
-                    >
-                      Refinement & Detailing:
-                    </p>
-                    <p
-                      class="text-[15px] line-clamp-2 lg:text-[13px] 2xl:text-[15px]"
-                    >
-                      lans are fine-tuned with precision, ensuring the balance
-                      of aesthetics and functionality.
-                    </p>
-                  </div>
-                </div>
-                <div class="flex gap-[15px] items-baseline -ml-[5px]">
-                  <div>
-                    <div class="bg-gold size-[10px] rounded-full"></div>
-                  </div>
-                  <div>
-                    <p
-                      class="mb-2 text-[18px] sm:text-[20px] lg:text-base 2xl:text-[20px] font-semibold"
-                    >
-                      Visual Presentation:
-                    </p>
-                    <p
-                      class="text-[15px] line-clamp-2 lg:text-[13px] 2xl:text-[15px]"
-                    >
-                      Mood boards, 3D renderings, and layouts help you visualize
-                      the future space before execution.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- ============================================== -->
-    <!-- ✨      Newsletter Section              ✨ -->
-    <!-- ============================================== -->
-    <div
-      class="mt-[78px] max-w-[550px] px-4 sm:px-8 mx-auto text-center mb-[500px]"
-    >
-      <h3 class="font-semibold text-[25px] mb-[14px]">
-        Newsletter Subscription
-      </h3>
-      <p class="text-[15px] mb-8">
-        Subscribe to get the latest interior trends
-      </p>
-      <div class="flex">
-        <input
-          type="text"
-          placeholder="Type Your Email"
-          class="max-w-[394px] w-full text-[15px] pt-[21px] pb-6 px-[18px] text-gold placeholder:text-gold bg-transparent border border-gold focus:outline-none h-[56px]"
-        />
-        <button
-          class="uppercase h-[56px] w-[156px] font-medium text-[20px] bg-gold text-black"
-        >
-          Submit
-        </button>
       </div>
     </div>
   </body>
