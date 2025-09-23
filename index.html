@@ -133,6 +133,67 @@
       .flickity-projects .flickity-button {
         display: none;
       }
+
+      /* Kitchen Project Slider Styles */
+      .flickity-kitchen {
+        width: 100%;
+      }
+      
+      .flickity-kitchen .carousel-cell {
+        width: 100%; /* 1 image on mobile */
+        margin-right: 15px;
+      }
+      
+      /* Tablet: Show 2 images */
+      @media (min-width: 768px) {
+        .flickity-kitchen .carousel-cell {
+          width: calc(50% - 7.5px); /* 2 images */
+        }
+      }
+      
+      /* Laptop: Show 4 images */
+      @media (min-width: 1024px) {
+        .flickity-kitchen .carousel-cell {
+          width: calc(25% - 11.25px); /* 4 images */
+        }
+      }
+      
+      /* Desktop: Show 5 images */
+      @media (min-width: 1280px) {
+        .flickity-kitchen .carousel-cell {
+          width: calc(20% - 12px); /* 5 images */
+        }
+      }
+      
+      .flickity-kitchen .carousel-cell .kitchen-image {
+        width: 100%;
+        height: 300px;
+      }
+      
+      @media (min-width: 1024px) {
+        .flickity-kitchen .carousel-cell .kitchen-image {
+          height: 364px;
+        }
+      }
+      
+      .flickity-kitchen .flickity-viewport {
+        height: auto;
+      }
+      
+      /* Hide Flickity dots */
+      .flickity-kitchen .flickity-page-dots {
+        display: none;
+      }
+      
+      /* Hide default Flickity buttons */
+      .flickity-projects .flickity-button {
+        display: none;
+      }
+
+      /* Hide default Flickity buttons for kitchen carousel */
+      .flickity-kitchen .flickity-button {
+        display: none;
+      }
     </style>
   </head>
   <body class="font-montserrat">
@@ -1858,7 +1919,9 @@
       </div>
     </section>
 
-    <!-- Recent Kitchen Project Section -->
+    <!-- ============================================== -->
+    <!-- ✨      Recent Kitchen Project Section          ✨ -->
+    <!-- ============================================== -->
     <section class="bg-dark-green relative overflow-hidden">
       <!-- Vertical dashed grid lines -->
       <div
@@ -1963,84 +2026,125 @@
           </h2>
         </div>
 
-        <!-- Images Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-[15px] lg:gap-[25px] max-w-[1611px] mx-auto">
-          <!-- Image 1 -->
-          <div class="w-full h-[300px] lg:h-[364px] relative">
-            <img 
-              src="/assets/images/kitchen-project-1-6acdd9.jpg" 
-              alt="Kitchen Project 1" 
-              class="w-full h-full object-cover"
-            />
-          </div>
-
-          <!-- Image 2 with Text Overlay -->
-          <div class="w-full h-[300px] lg:h-[364px] relative">
-            <img 
-              src="/assets/images/kitchen-project-2-895q61.jpg" 
-              alt="Kitchen Project 2" 
-              class="w-full h-full object-cover border border-gold"
-            />
-            <!-- Text overlay -->
-            <div class="absolute bottom-0 left-0 bg-gold px-[21px] py-[33px] w-[237px] h-[103px]">
-              <p class="text-dark-green font-light text-[12px] leading-[1.62] mb-2 font-montserrat">// Residential</p>
-              <h3 class="text-dark-green font-medium text-[15px] leading-[1.3] font-montserrat">
-                Luxury Apartment<br>
-                Kitchen Design
-              </h3>
+        <!-- Decorative design elements -->
+        <div class="mb-[23px]">
+          <div class="flex items-center justify-end gap-[30px]">
+            <!-- Left design element (Previous Arrow) -->
+            <div class="relative cursor-pointer" id="kitchen-prev-btn">
+              <svg width="42" height="39" viewBox="0 0 42 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19.8567 36.42L2.17311 19.2793L19.8567 2.13865M4.62917 19.2793L40.4876 19.2793" stroke="#CEAD73" stroke-width="3" stroke-miterlimit="10" stroke-linecap="square"/>
+              </svg>
             </div>
-          </div>
-
-          <!-- Image 3 -->
-          <div class="w-full h-[300px] lg:h-[364px] relative">
-            <img 
-              src="/assets/images/kitchen-project-3-13aee5.jpg" 
-              alt="Kitchen Project 3" 
-              class="w-full h-full object-cover"
-            />
-          </div>
-
-          <!-- Image 4 -->
-          <div class="w-full h-[300px] lg:h-[364px] relative">
-            <img 
-              src="/assets/images/kitchen-project-4-2dcc41.jpg" 
-              alt="Kitchen Project 4" 
-              class="w-full h-full object-cover"
-            />
-          </div>
-
-          <!-- Image 5 (narrow) - spans full width on mobile/tablet -->
-          <div class="w-full md:col-span-2 lg:col-span-3 xl:col-span-1 h-[200px] lg:h-[364px] relative">
-            <img 
-              src="/assets/images/kitchen-project-5-5697ed.jpg" 
-              alt="Kitchen Project 5" 
-              class="w-full h-full object-cover"
-            />
+            
+            <!-- Center line -->
+            <div class="w-[1px] h-[13px] bg-gold"></div>
+            
+            <!-- Right design element (Next Arrow) -->
+            <div class="relative cursor-pointer" id="kitchen-next-btn">
+              <svg width="42" height="39" viewBox="0 0 42 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M22.1433 2.13865L39.8269 19.2793L22.1433 36.42M37.3708 19.2793L1.51241 19.2793" stroke="#CEAD73" stroke-width="3" stroke-miterlimit="10" stroke-linecap="square"/>
+              </svg>
+            </div>
           </div>
         </div>
 
-        <!-- Decorative design elements at bottom -->
-        <div class="flex items-center justify-center gap-[30px] mt-20">
-          <!-- Left element (with opacity) -->
-          <div class="relative opacity-10">
-            <svg width="42" height="39" viewBox="0 0 42 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M22.1433 2.13865L39.8269 19.2793L22.1433 36.42M37.3708 19.2793L1.51241 19.2793" stroke="#CEAD73" stroke-width="3" stroke-miterlimit="10" stroke-linecap="square"/>
-            </svg>
-          </div>
-          
-          <!-- Center line -->
-          <div class="w-[1px] h-[13px] bg-gold"></div>
-          
-          <!-- Right element -->
-          <div class="relative">
-            <svg width="42" height="39" viewBox="0 0 42 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M19.8567 36.42L2.17311 19.2793L19.8567 2.13865M4.62917 19.2793L40.4876 19.2793" stroke="#CEAD73" stroke-width="3" stroke-miterlimit="10" stroke-linecap="square"/>
-            </svg>
+        <!-- Images Carousel -->
+        <div class="max-w-[1611px] mx-auto">
+          <div class="flickity-kitchen" data-flickity='{ "cellAlign": "left", "contain": true, "groupCells": false, "pageDots": false }'>
+            
+            <!-- Image 1 -->
+            <div class="carousel-cell">
+              <div class="w-full kitchen-image relative">
+                <img 
+                  src="/assets/images/kitchen-project-1-6acdd9.jpg" 
+                  alt="Kitchen Project 1" 
+                  class="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+
+            <!-- Image 2 with Text Overlay -->
+            <div class="carousel-cell">
+              <div class="w-full kitchen-image relative">
+                <img 
+                  src="/assets/images/kitchen-project-2-895q61.jpg" 
+                  alt="Kitchen Project 2" 
+                  class="w-full h-full object-cover border border-gold"
+                />
+                <!-- Text overlay -->
+                <div class="absolute bottom-0 left-0 bg-gold px-[21px] py-[33px] w-[237px] h-[103px]">
+                  <p class="text-dark-green font-light text-[12px] leading-[1.62] mb-2 font-montserrat">// Residential</p>
+                  <h3 class="text-dark-green font-medium text-[15px] leading-[1.3] font-montserrat">
+                    Luxury Apartment<br>
+                    Kitchen Design
+                  </h3>
+                </div>
+              </div>
+            </div>
+
+            <!-- Image 3 -->
+            <div class="carousel-cell">
+              <div class="w-full kitchen-image relative">
+                <img 
+                  src="/assets/images/kitchen-project-3-13aee5.jpg" 
+                  alt="Kitchen Project 3" 
+                  class="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+
+            <!-- Image 4 -->
+            <div class="carousel-cell">
+              <div class="w-full kitchen-image relative">
+                <img 
+                  src="/assets/images/kitchen-project-4-2dcc41.jpg" 
+                  alt="Kitchen Project 4" 
+                  class="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+
+            <!-- Image 5 -->
+            <div class="carousel-cell">
+              <div class="w-full kitchen-image relative">
+                <img 
+                  src="/assets/images/kitchen-project-5-5697ed.jpg" 
+                  alt="Kitchen Project 5" 
+                  class="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+
+            <!-- Additional images for more sliding content -->
+            <div class="carousel-cell">
+              <div class="w-full kitchen-image relative">
+                <img 
+                  src="/assets/images/kitchen-project-1-6acdd9.jpg" 
+                  alt="Kitchen Project 6" 
+                  class="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+
+            <div class="carousel-cell">
+              <div class="w-full kitchen-image relative">
+                <img 
+                  src="/assets/images/kitchen-project-3-13aee5.jpg" 
+                  alt="Kitchen Project 7" 
+                  class="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
     </section>
     
+    <!-- ============================================== -->
+    <!-- ✨      Hero Section 2          ✨ -->
+    <!-- ============================================== -->
+
     <!-- Flickity JS -->
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     
@@ -2152,6 +2256,73 @@
 
           // Update states on slide change
           projectsFlickity.on('select', updateProjectsArrowStates);
+        }
+
+        // Initialize Kitchen Project Flickity
+        const kitchenFlickity = new Flickity('.flickity-kitchen', {
+          cellAlign: 'left',
+          contain: true,
+          groupCells: false,
+          pageDots: false,
+          prevNextButtons: false, // Hide default buttons
+          wrapAround: false
+        });
+
+        // Connect custom arrows to Kitchen Flickity
+        const kitchenPrevBtn = document.getElementById('kitchen-prev-btn');
+        const kitchenNextBtn = document.getElementById('kitchen-next-btn');
+
+        if (kitchenPrevBtn && kitchenNextBtn) {
+          kitchenPrevBtn.addEventListener('click', function() {
+            kitchenFlickity.previous();
+          });
+
+          kitchenNextBtn.addEventListener('click', function() {
+            kitchenFlickity.next();
+          });
+
+          // Update arrow states based on slider position
+          function updateKitchenArrowStates() {
+            const selectedIndex = kitchenFlickity.selectedIndex;
+            const slideCount = kitchenFlickity.slides.length;
+            
+            // Update previous button opacity
+            if (selectedIndex === 0) {
+              kitchenPrevBtn.style.opacity = '0.3';
+              kitchenPrevBtn.style.pointerEvents = 'none';
+            } else {
+              kitchenPrevBtn.style.opacity = '1';
+              kitchenPrevBtn.style.pointerEvents = 'auto';
+            }
+            
+            // Update next button opacity based on responsive breakpoints
+            let visibleSlides = 1; // Mobile default
+            
+            if (window.innerWidth >= 1280) { // Desktop
+              visibleSlides = 5;
+            } else if (window.innerWidth >= 1024) { // Laptop
+              visibleSlides = 4;
+            } else if (window.innerWidth >= 768) { // Tablet
+              visibleSlides = 2;
+            }
+            
+            if (selectedIndex >= slideCount - visibleSlides) {
+              kitchenNextBtn.style.opacity = '0.3';
+              kitchenNextBtn.style.pointerEvents = 'none';
+            } else {
+              kitchenNextBtn.style.opacity = '1';
+              kitchenNextBtn.style.pointerEvents = 'auto';
+            }
+          }
+
+          // Initial state update
+          updateKitchenArrowStates();
+
+          // Update states on slide change
+          kitchenFlickity.on('select', updateKitchenArrowStates);
+          
+          // Update states on window resize
+          window.addEventListener('resize', updateKitchenArrowStates);
         }
       });
     </script>
