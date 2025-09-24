@@ -43,17 +43,8 @@
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
   </head>
   <body class="font-montserrat">
-    <!-- ============================================== -->
-    <!-- ✨      Our Process Section               ✨ -->
-    <!-- ============================================== -->
-    <div class="relative">
-      <img
-        src="/assets/images/our-process.jpg"
-        alt="our process"
-        class="w-full h-[550px] lg:h-[500px] 2xl:h-[390px] object-cover brightness-[15%]"
-      />
-      
-      <!-- ============================================== -->
+
+          <!-- ============================================== -->
       <!-- ✨      Header Section                        ✨ -->
       <!-- ============================================== -->
       <header class="fixed box top-0 left-0 right-0 z-50">
@@ -90,20 +81,26 @@
           </div>
 
           <!-- Content Container - Full Width with Max Width Constraint -->
-          <div class="flex justify-between items-center h-full px-[78px]">
+          <div class="flex justify-between items-center h-full px-4 sm:px-8  2xl:px-[78px]">
             <!-- Logo -->
-         
-              <div class="z-10">
-                <!-- Logo SVG placeholder - you can replace with actual logo -->
-                <img
-                  src="/assets/icons/logo.svg"
-                  alt="Logo"
-                  class="w-[88px]"
-                />
+            <div class="z-10">
+              <!-- Logo SVG placeholder - you can replace with actual logo -->
+              <img
+                src="/assets/icons/logo.svg"
+                alt="Logo"
+                class="w-[88px]"
+              />
             </div>
 
+            <!-- Mobile Hamburger Menu Button -->
+            <button id="mobileMenuBtn" class="lg:hidden z-50 relative w-8 h-8 flex flex-col justify-center items-center">
+              <span class="hamburger-line w-6 h-0.5 bg-gold transition-all duration-300 ease-in-out"></span>
+              <span class="hamburger-line w-6 h-0.5 bg-gold transition-all duration-300 ease-in-out mt-1.5"></span>
+              <span class="hamburger-line w-6 h-0.5 bg-gold transition-all duration-300 ease-in-out mt-1.5"></span>
+            </button>
+
             <!-- Navigation Menu -->
-            <nav class="flex items-center space-x-[50px] z-10">
+            <nav class="hidden lg:flex items-center space-x-6 xl:space-x-8 2xl:space-x-[50px] z-10">
               <!-- HOME -->
               <div class="relative group">
                 <a
@@ -316,6 +313,155 @@
           </div>
         </div>
       </header>
+
+      <!-- Mobile Menu Overlay -->
+      <div id="mobileMenuOverlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 opacity-0 invisible transition-all duration-300 ease-in-out lg:hidden"></div>
+
+      <!-- Mobile Menu -->
+      <div id="mobileMenu" class="fixed top-0 right-0 h-full w-80 z-50 transform translate-x-full transition-transform duration-300 ease-in-out lg:hidden">
+        <!-- Glass Background -->
+        <div class="absolute inset-0 w-full h-full">
+          <!-- Glass backdrop -->
+          <div
+            class="absolute inset-0 w-full h-full"
+            style="
+              background: rgba(13, 55, 48, 0.95);
+              backdrop-filter: blur(20px);
+              -webkit-backdrop-filter: blur(20px);
+            "
+          ></div>
+
+          <!-- Glass border -->
+          <div
+            class="absolute inset-0 w-full h-full border-l-2"
+            style="
+              border-image: linear-gradient(
+                  180deg,
+                  rgba(179, 161, 102, 0.8) 0%,
+                  rgba(140, 131, 102, 0.4) 50%,
+                  rgba(179, 161, 102, 0.8) 100%
+                )
+                1;
+            "
+          ></div>
+        </div>
+
+        <!-- Menu Content -->
+        <div class="relative z-[999] h-full flex flex-col p-8 overflow-y-auto">
+          <!-- Close Button -->
+          <button id="mobileMenuClose" class="absolute top-6 right-6 w-8 h-8 flex items-center justify-center">
+            <svg class="w-6 h-6 text-gold hover:text-white transition-colors duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+
+          <!-- Navigation Items -->
+          <nav class="flex flex-col space-y-8 mt-8">
+            <!-- HOME -->
+            <div class="mobile-nav-item">
+              <a
+                href="#"
+                class="text-gold hover:text-white duration-300 text-lg font-medium uppercase leading-[1.2] tracking-wide block py-2"
+              >
+                HOME
+              </a>
+            </div>
+
+            <!-- What we do -->
+            <div class="mobile-nav-item">
+              <a
+                href="#"
+                class="text-gold hover:text-white duration-300 text-lg font-medium uppercase leading-[1.2] tracking-wide block py-2"
+              >
+                what we do
+              </a>
+              <!-- Mobile Submenu -->
+              <div class="ml-4 mt-4 space-y-3">
+                <div class="text-gold font-semibold text-sm">Residential Interior</div>
+                <div class="ml-3 space-y-2 text-gold text-xs">
+                  <p><a href="#" class="hover:text-white transition-colors duration-200">- Full Home Interior</a></p>
+                  <p><a href="#" class="hover:text-white transition-colors duration-200">- Kitchen Interior</a></p>
+                  <p><a href="#" class="hover:text-white transition-colors duration-200">- Bedroom Interior</a></p>
+                  <p><a href="#" class="hover:text-white transition-colors duration-200">- Living Room Interior</a></p>
+                  <p><a href="#" class="hover:text-white transition-colors duration-200">- Bathroom Interior</a></p>
+                </div>
+                <div class="text-gold font-semibold text-sm">Commercial Interior</div>
+                <div class="ml-3 space-y-2 text-gold text-xs">
+                  <p><a href="#" class="hover:text-white transition-colors duration-200">- Office Interior</a></p>
+                  <p><a href="#" class="hover:text-white transition-colors duration-200">- Restaurant & Café Interior</a></p>
+                  <p><a href="#" class="hover:text-white transition-colors duration-200">- Hotel & Hospitality Interior</a></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Portfolio -->
+            <div class="mobile-nav-item">
+              <a
+                href="#"
+                class="text-gold hover:text-white duration-300 text-lg font-medium uppercase leading-[1.2] tracking-wide block py-2"
+              >
+                portfolio
+              </a>
+            </div>
+
+            <!-- Why choose us -->
+            <div class="mobile-nav-item">
+              <a
+                href="#"
+                class="text-gold hover:text-white duration-300 text-lg font-medium uppercase leading-[1.2] tracking-wide block py-2"
+              >
+                why choose us
+              </a>
+            </div>
+
+            <!-- How we work -->
+            <div class="mobile-nav-item">
+              <a
+                href="#"
+                class="text-gold hover:text-white duration-300 text-lg font-medium uppercase leading-[1.2] tracking-wide block py-2"
+              >
+                how we work
+              </a>
+            </div>
+
+            <!-- About us -->
+            <div class="mobile-nav-item">
+              <a
+                href="#"
+                class="text-gold hover:text-white duration-300 text-lg font-medium uppercase leading-[1.2] tracking-wide block py-2"
+              >
+                about us
+              </a>
+            </div>
+
+            <!-- Contact us -->
+            <div class="mobile-nav-item">
+              <a
+                href="#"
+                class="text-gold hover:text-white duration-300 text-lg font-medium uppercase leading-[1.2] tracking-wide block py-2"
+              >
+                contact us
+              </a>
+            </div>
+          </nav>
+
+          <!-- Decorative Element -->
+          <div class="mt-auto mb-8">
+            <div class="w-full h-px bg-gradient-to-r from-transparent via-gold to-transparent opacity-30"></div>
+          </div>
+        </div>
+      </div>
+
+
+    <!-- ============================================== -->
+    <!-- ✨      Our Process Section               ✨ -->
+    <!-- ============================================== -->
+    <div class="relative">
+      <img
+        src="/assets/images/our-process.jpg"
+        alt="our process"
+        class="w-full h-screen lg:h-[calc(100vh-80px)] object-cover brightness-[15%]"
+      />
 
       <div
         class="absolute inset-0 text-center box flex flex-col justify-center"
@@ -1024,7 +1170,7 @@
               placeholder text commonly use
             </p>
           </div>
-          <div class="pt-[70px] px-4 lg:pl-12 pb-[163px]">
+          <div class="pt-[70px] px-4 lg:pl-12 pb-10 lgpb-[163px]">
             <h3
               class="font-normal sm:font-medium text-[30px] sm:text-[45px] leading-[100%] sm:leading-[108%] tracking-[0.0em sm:tracking-[0.0em] text-gold"
             >
@@ -1049,7 +1195,7 @@
       <!-- ============================================== -->
       <!-- ✨      Our Team Section                       ✨ -->
       <!-- ============================================== -->
-      <div class="box mt-[148px] mb-[273px]">
+      <div class="box mt-10 lg:mt-[148px] mb-20 lg:mb-[273px]">
         <h3
           class="font-normal sm:font-medium text-[30px] sm:text-[45px] leading-[100%] sm:leading-[108%] tracking-[0.0em sm:tracking-[0.0em] text-gold text-center pb-[26px]"
         >
@@ -1576,7 +1722,7 @@
           </div>
 
           <!-- Right Side - Our Projects -->
-          <div class="w-full py-[72px] xl:pl-[38px]">
+          <div class="w-full pb-[72px] pt-0 lg:pt-[72px] xl:pl-[38px]">
             <!-- Decorative design elements -->
 
             <!-- Section Heading -->
@@ -1872,7 +2018,7 @@
     <!-- ✨      Recent Kitchen Project Section          ✨ -->
     <!-- ============================================== -->
     <section class="box relative overflow-hidden -mt-40 mb-40">
-      <div class="bg-dark-green px-4 md:px-8 lg:px-10">
+      <div class="bg-dark-green px-4 md:px-8 lg:px-10 pb-20">
       <!-- Vertical dashed grid lines -->
       <div
         class="absolute inset-0 opacity-[12%]"
@@ -1970,7 +2116,7 @@
       <div class="relative z-10">
         <!-- Section Title -->
         <div class="text-center mb-16 pt-[71px]">
-          <h2 class="text-gold font-medium text-[45px] leading-[1.07] font-montserrat">
+          <h2 class="text-gold font-medium text-3xl lg:text-[45px] leading-[1.07] font-montserrat">
             Recent<br>
             Kitchen Project
           </h2>
@@ -2092,6 +2238,11 @@
       </div>
     </section>
 
+
+        <!-- ============================================== -->
+    <!-- ✨                  Footer Section             ✨ -->
+    <!-- ============================================== -->
+     <div class="h-[45px] w-full bg-gold text-[15px] text-black flex items-center justify-center ">Copyright © 2025</div>
     <!-- Flickity JS -->
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     
