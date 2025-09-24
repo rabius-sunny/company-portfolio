@@ -1,0 +1,372 @@
+document.addEventListener('DOMContentLoaded', function () {
+  const reviewsFlickity = new Flickity('.flickity-reviews', {
+    cellAlign: 'left',
+    contain: true,
+    groupCells: false,
+    pageDots: false,
+    prevNextButtons: false, // Hide default buttons
+    wrapAround: false
+  });
+
+  // Connect custom arrows to Flickity
+  const prevBtn = document.getElementById('reviews-prev-btn');
+  const nextBtn = document.getElementById('reviews-next-btn');
+
+  if (prevBtn && nextBtn) {
+    prevBtn.addEventListener('click', function () {
+      reviewsFlickity.previous();
+    });
+
+    nextBtn.addEventListener('click', function () {
+      reviewsFlickity.next();
+    });
+
+    // Update arrow states based on slider position
+    function updateArrowStates() {
+      const selectedIndex = reviewsFlickity.selectedIndex;
+      const slideCount = reviewsFlickity.slides.length;
+
+      // Update previous button opacity
+      if (selectedIndex === 0) {
+        prevBtn.style.opacity = '0.3';
+        prevBtn.style.pointerEvents = 'none';
+      } else {
+        prevBtn.style.opacity = '1';
+        prevBtn.style.pointerEvents = 'auto';
+      }
+
+      // Update next button opacity
+      if (selectedIndex >= slideCount - 3) {
+        // Since we show 3 slides at once
+        nextBtn.style.opacity = '0.3';
+        nextBtn.style.pointerEvents = 'none';
+      } else {
+        nextBtn.style.opacity = '1';
+        nextBtn.style.pointerEvents = 'auto';
+      }
+    }
+
+    // Initial state update
+    updateArrowStates();
+
+    // Update states on slide change
+    reviewsFlickity.on('select', updateArrowStates);
+  }
+
+  // Initialize Projects Flickity
+  const projectsFlickity = new Flickity('.flickity-projects', {
+    cellAlign: 'left',
+    contain: true,
+    groupCells: false,
+    pageDots: false,
+    prevNextButtons: false, // Hide default buttons
+    wrapAround: false
+  });
+
+  // Connect custom arrows to Projects Flickity
+  const projectsPrevBtn = document.getElementById('projects-prev-btn');
+  const projectsNextBtn = document.getElementById('projects-next-btn');
+
+  if (projectsPrevBtn && projectsNextBtn) {
+    projectsPrevBtn.addEventListener('click', function () {
+      projectsFlickity.previous();
+    });
+
+    projectsNextBtn.addEventListener('click', function () {
+      projectsFlickity.next();
+    });
+
+    // Update arrow states based on slider position
+    function updateProjectsArrowStates() {
+      const selectedIndex = projectsFlickity.selectedIndex;
+      const slideCount = projectsFlickity.slides.length;
+
+      // Update previous button opacity
+      if (selectedIndex === 0) {
+        projectsPrevBtn.style.opacity = '0.3';
+        projectsPrevBtn.style.pointerEvents = 'none';
+      } else {
+        projectsPrevBtn.style.opacity = '1';
+        projectsPrevBtn.style.pointerEvents = 'auto';
+      }
+
+      // Update next button opacity
+      if (selectedIndex >= slideCount - 3) {
+        // Since we show 1 slide at once (full 3x2 grid)
+        projectsNextBtn.style.opacity = '0.3';
+        projectsNextBtn.style.pointerEvents = 'none';
+      } else {
+        projectsNextBtn.style.opacity = '1';
+        projectsNextBtn.style.pointerEvents = 'auto';
+      }
+    }
+
+    // Initial state update
+    updateProjectsArrowStates();
+
+    // Update states on slide change
+    projectsFlickity.on('select', updateProjectsArrowStates);
+  }
+
+  // Initialize Kitchen Project Flickity
+  const kitchenFlickity = new Flickity('.flickity-kitchen', {
+    cellAlign: 'left',
+    contain: true,
+    groupCells: false,
+    pageDots: false,
+    prevNextButtons: false, // Hide default buttons
+    wrapAround: false
+  });
+
+  // Connect custom arrows to Kitchen Flickity
+  const kitchenPrevBtn = document.getElementById('kitchen-prev-btn');
+  const kitchenNextBtn = document.getElementById('kitchen-next-btn');
+
+  if (kitchenPrevBtn && kitchenNextBtn) {
+    kitchenPrevBtn.addEventListener('click', function () {
+      kitchenFlickity.previous();
+    });
+
+    kitchenNextBtn.addEventListener('click', function () {
+      kitchenFlickity.next();
+    });
+
+    // Update arrow states based on slider position
+    function updateKitchenArrowStates() {
+      const selectedIndex = kitchenFlickity.selectedIndex;
+      const slideCount = kitchenFlickity.slides.length;
+
+      // Update previous button opacity
+      if (selectedIndex === 0) {
+        kitchenPrevBtn.style.opacity = '0.3';
+        kitchenPrevBtn.style.pointerEvents = 'none';
+      } else {
+        kitchenPrevBtn.style.opacity = '1';
+        kitchenPrevBtn.style.pointerEvents = 'auto';
+      }
+
+      // Update next button opacity based on responsive breakpoints
+      let visibleSlides = 1; // Mobile default
+
+      if (window.innerWidth >= 1280) {
+        // Desktop
+        visibleSlides = 5;
+      } else if (window.innerWidth >= 1024) {
+        // Laptop
+        visibleSlides = 4;
+      } else if (window.innerWidth >= 768) {
+        // Tablet
+        visibleSlides = 2;
+      }
+
+      if (selectedIndex >= slideCount - visibleSlides) {
+        kitchenNextBtn.style.opacity = '0.3';
+        kitchenNextBtn.style.pointerEvents = 'none';
+      } else {
+        kitchenNextBtn.style.opacity = '1';
+        kitchenNextBtn.style.pointerEvents = 'auto';
+      }
+    }
+
+    // Initial state update
+    updateKitchenArrowStates();
+
+    // Update states on slide change
+    kitchenFlickity.on('select', updateKitchenArrowStates);
+
+    // Update states on window resize
+    window.addEventListener('resize', updateKitchenArrowStates);
+  }
+
+  // Modal Gallery Functionality
+  const modal = document.getElementById('imageModal');
+  const modalClose = document.getElementById('modalClose');
+  const modalMainSlider = document.getElementById('modalMainSlider');
+  const modalThumbnails = document.getElementById('modalThumbnails');
+  const reviewImages = document.querySelectorAll('.review-image');
+  const projectImages = document.querySelectorAll('.project-image');
+
+  // Sample gallery images for each review
+  const galleryImages = [
+    [
+      '/assets/images/project-1-282f27.jpg',
+      '/assets/images/project-1-282f27.jpg',
+      '/assets/images/project-1-282f27.jpg',
+      '/assets/images/project-1-282f27.jpg',
+      '/assets/images/project-1-282f27.jpg'
+    ]
+  ];
+
+  // Sample gallery images for each project
+  const projectGalleryImages = [
+    [
+      '/assets/images/project-1-282f27.jpg',
+      '/assets/images/project-1-282f27.jpg',
+      '/assets/images/project-1-282f27.jpg',
+      '/assets/images/project-1-282f27.jpg',
+      '/assets/images/project-1-282f27.jpg'
+    ]
+  ];
+
+  let mainSliderFlickity;
+  let thumbnailsFlickity;
+
+  // Add click event to each review image
+  reviewImages.forEach((image, index) => {
+    image.addEventListener('click', function () {
+      openModal(index, 'review');
+    });
+  });
+
+  // Add click event to each project image
+  projectImages.forEach((image, index) => {
+    image.addEventListener('click', function () {
+      openModal(index, 'project');
+    });
+  });
+
+  function openModal(imageIndex, type = 'review') {
+    // Get images for this gallery based on type
+    let images;
+    if (type === 'project') {
+      images = projectGalleryImages[imageIndex % projectGalleryImages.length];
+    } else {
+      images = galleryImages[imageIndex % galleryImages.length];
+    }
+
+    // Clear existing content
+    modalMainSlider.innerHTML = '';
+    modalThumbnails.innerHTML = '';
+
+    // Create main slider slides
+    images.forEach((imageSrc, i) => {
+      const mainSlide = document.createElement('div');
+      mainSlide.className = 'carousel-cell';
+      mainSlide.innerHTML = `<img src="${imageSrc}" alt="Gallery Image ${
+        i + 1
+      }">`;
+      modalMainSlider.appendChild(mainSlide);
+
+      const thumbSlide = document.createElement('div');
+      thumbSlide.className = 'carousel-cell';
+      thumbSlide.innerHTML = `<img src="${imageSrc}" alt="Thumbnail ${i + 1}">`;
+      modalThumbnails.appendChild(thumbSlide);
+    });
+
+    // Show modal
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+
+    // Initialize Flickity sliders
+    setTimeout(() => {
+      // Main slider
+      mainSliderFlickity = new Flickity(modalMainSlider, {
+        cellAlign: 'center',
+        contain: true,
+        pageDots: false,
+        prevNextButtons: false,
+        wrapAround: false,
+        adaptiveHeight: false
+      });
+
+      // Thumbnails slider
+      thumbnailsFlickity = new Flickity(modalThumbnails, {
+        cellAlign: 'left',
+        contain: true,
+        pageDots: false,
+        prevNextButtons: false,
+        asNavFor: modalMainSlider,
+        percentPosition: false
+      });
+
+      // Custom navigation
+      const modalPrevBtn = document.getElementById('modalPrevBtn');
+      const modalNextBtn = document.getElementById('modalNextBtn');
+
+      modalPrevBtn.addEventListener('click', () =>
+        mainSliderFlickity.previous()
+      );
+      modalNextBtn.addEventListener('click', () => mainSliderFlickity.next());
+
+      // Sync sliders
+      mainSliderFlickity.on('select', () => {
+        thumbnailsFlickity.select(mainSliderFlickity.selectedIndex);
+      });
+
+      // Thumbnail navigation arrows
+      const thumbnailPrevBtn = document.getElementById('modalThumbnailPrevBtn');
+      const thumbnailNextBtn = document.getElementById('modalThumbnailNextBtn');
+
+      if (thumbnailPrevBtn && thumbnailNextBtn) {
+        thumbnailPrevBtn.addEventListener('click', () => {
+          thumbnailsFlickity.previous();
+        });
+
+        thumbnailNextBtn.addEventListener('click', () => {
+          thumbnailsFlickity.next();
+        });
+
+        // Update thumbnail arrow states
+        function updateThumbnailArrowStates() {
+          const selectedIndex = thumbnailsFlickity.selectedIndex;
+          const slideCount = thumbnailsFlickity.slides.length;
+          const visibleSlides = Math.floor(thumbnailsFlickity.size.width / 160); // Approximate visible thumbnails
+
+          // Update previous button
+          if (selectedIndex === 0) {
+            thumbnailPrevBtn.style.opacity = '0.3';
+            thumbnailPrevBtn.style.pointerEvents = 'none';
+          } else {
+            thumbnailPrevBtn.style.opacity = '1';
+            thumbnailPrevBtn.style.pointerEvents = 'auto';
+          }
+
+          // Update next button
+          if (selectedIndex >= slideCount - visibleSlides) {
+            thumbnailNextBtn.style.opacity = '0.3';
+            thumbnailNextBtn.style.pointerEvents = 'none';
+          } else {
+            thumbnailNextBtn.style.opacity = '1';
+            thumbnailNextBtn.style.pointerEvents = 'auto';
+          }
+        }
+
+        // Initial state update
+        setTimeout(updateThumbnailArrowStates, 200);
+
+        // Update states on thumbnail slide change
+        thumbnailsFlickity.on('select', updateThumbnailArrowStates);
+      }
+    }, 100);
+  }
+
+  function closeModal() {
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+
+    // Destroy Flickity instances
+    if (mainSliderFlickity) {
+      mainSliderFlickity.destroy();
+      mainSliderFlickity = null;
+    }
+    if (thumbnailsFlickity) {
+      thumbnailsFlickity.destroy();
+      thumbnailsFlickity = null;
+    }
+  }
+
+  // Close modal events
+  modalClose.addEventListener('click', closeModal);
+  modal.addEventListener('click', function (e) {
+    if (e.target === modal) {
+      closeModal();
+    }
+  });
+
+  // Close modal with Escape key
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && modal.classList.contains('active')) {
+      closeModal();
+    }
+  });
+});

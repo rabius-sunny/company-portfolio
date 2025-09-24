@@ -23,20 +23,8 @@
         }
       };
     </script>
-    <style>
-      body {
-        color: #cead73 !important;
-        background-color: #000;
-      }
-      .box {
-        max-width: 1700px;
-        margin: auto;
-        padding: 0 16px;
-      }
-      p {
-        line-height: 160%;
-      }
-    </style>
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css">
     <link
       rel="preconnect"
       href="https://fonts.googleapis.com"
@@ -53,148 +41,6 @@
     
     <!-- Flickity CSS -->
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-    
-    <style>
-      .flickity-reviews {
-        width: 100%;
-        height: 495px; /* Total height: 240px + 15px gap + 240px */
-      }
-      
-      .flickity-reviews .carousel-cell {
-        width: 50%; /* Show 2 slides on mobile */
-        margin-right: 15px;
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-      }
-      
-      /* Desktop: Show 3 columns */
-      @media (min-width: 1024px) {
-        .flickity-reviews .carousel-cell {
-          width: 33.333%; /* Show 3 slides on desktop */
-        }
-      }
-      
-      .flickity-reviews .carousel-cell .review-image {
-        width: 100%;
-        height: 240px; /* Exact same height as original grid */
-      }
-      
-      .flickity-reviews .flickity-viewport {
-        height: 100%;
-      }
-      
-      /* Hide Flickity dots */
-      .flickity-reviews .flickity-page-dots {
-        display: none;
-      }
-      
-      /* Hide default Flickity buttons */
-      .flickity-reviews .flickity-button {
-        display: none;
-      }
-
-      /* Projects Slider Styles */
-      .flickity-projects {
-        width: 100%;
-        height: 495px; /* Total height: 240px + 15px gap + 240px */
-      }
-      
-      .flickity-projects .carousel-cell {
-        width: 50%; /* Show 2 slides on mobile */
-        margin-right: 15px;
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-      }
-      
-      /* Desktop: Show 3 columns */
-      @media (min-width: 1024px) {
-        .flickity-projects .carousel-cell {
-          width: 33.333%; /* Show 3 slides on desktop */
-        }
-      }
-      
-      .flickity-projects .carousel-cell .project-image {
-        width: 100%;
-        height: 240px; /* Exact same height as original grid */
-      }
-      
-      .flickity-projects .flickity-viewport {
-        height: 100%;
-      }
-      
-      /* Hide Flickity dots */
-      .flickity-projects .flickity-page-dots {
-        display: none;
-      }
-      
-      /* Hide default Flickity buttons */
-      .flickity-projects .flickity-button {
-        display: none;
-      }
-
-      /* Kitchen Project Slider Styles */
-      .flickity-kitchen {
-        width: 100%;
-      }
-      
-      .flickity-kitchen .carousel-cell {
-        width: 100%; /* 1 image on mobile */
-        margin-right: 15px;
-      }
-      
-      /* Tablet: Show 2 images */
-      @media (min-width: 768px) {
-        .flickity-kitchen .carousel-cell {
-          width: calc(50% - 7.5px); /* 2 images */
-        }
-      }
-      
-      /* Laptop: Show 4 images */
-      @media (min-width: 1024px) {
-        .flickity-kitchen .carousel-cell {
-          width: calc(25% - 11.25px); /* 4 images */
-        }
-      }
-      
-      /* Desktop: Show 5 images */
-      @media (min-width: 1280px) {
-        .flickity-kitchen .carousel-cell {
-          width: calc(20% - 12px); /* 5 images */
-        }
-      }
-      
-      .flickity-kitchen .carousel-cell .kitchen-image {
-        width: 100%;
-        height: 300px;
-      }
-      
-      @media (min-width: 1024px) {
-        .flickity-kitchen .carousel-cell .kitchen-image {
-          height: 364px;
-        }
-      }
-      
-      .flickity-kitchen .flickity-viewport {
-        height: auto;
-      }
-      
-      /* Hide Flickity dots */
-      .flickity-kitchen .flickity-page-dots {
-        display: none;
-      }
-      
-      /* Hide default Flickity buttons */
-      .flickity-projects .flickity-button {
-        display: none;
-      }
-
-      /* Hide default Flickity buttons for kitchen carousel */
-      .flickity-kitchen .flickity-button {
-        display: none;
-      }
-    </style>
   </head>
   <body class="font-montserrat">
     <!-- ============================================== -->
@@ -1919,6 +1765,62 @@
       </div>
     </section>
     
+    <!-- Image Gallery Modal -->
+    <div class="modal-overlay" id="imageModal">
+      <div class="modal-content">
+        <button class="modal-close" id="modalClose">&times;</button>
+        
+        <div class="modal-gallery">
+          <!-- Main Image Slider -->
+          <div class="modal-main-slider" id="modalMainSlider">
+            <div class="carousel-cell">
+              <img src="/assets/images/project-1-282f27.jpg" alt="Gallery Image 2">
+            </div>
+            <div class="carousel-cell">
+              <img src="/assets/images/project-1-282f27.jpg" alt="Gallery Image 2">
+            </div>
+            <div class="carousel-cell">
+              <img src="/assets/images/project-1-282f27.jpg" alt="Gallery Image 2">
+            </div>
+            <div class="carousel-cell">
+              <img src="/assets/images/project-1-282f27.jpg" alt="Gallery Image 2">
+            </div>
+            <div class="carousel-cell">
+              <img src="/assets/images/project-1-282f27.jpg" alt="Gallery Image 2">
+            </div>
+       
+          </div>
+
+          <!-- Navigation Arrows -->
+          <div class="modal-nav-arrow modal-nav-prev" id="modalPrevBtn">‹</div>
+          <div class="modal-nav-arrow modal-nav-next" id="modalNextBtn">›</div>
+
+          <!-- Thumbnails Slider -->
+          <div class="modal-thumbnails" id="modalThumbnails">
+            <!-- Thumbnail Navigation Arrows -->
+            <div class="modal-thumbnail-nav modal-thumbnail-prev" id="modalThumbnailPrevBtn">‹</div>
+            <div class="modal-thumbnail-nav modal-thumbnail-next" id="modalThumbnailNextBtn">›</div>
+            
+             <div class="carousel-cell">
+              <img src="/assets/images/project-1-282f27.jpg" alt="Thumbnail 2">
+            </div>
+             <div class="carousel-cell">
+              <img src="/assets/images/project-1-282f27.jpg" alt="Thumbnail 2">
+            </div>
+             <div class="carousel-cell">
+              <img src="/assets/images/project-1-282f27.jpg" alt="Thumbnail 2">
+            </div>
+             <div class="carousel-cell">
+              <img src="/assets/images/project-1-282f27.jpg" alt="Thumbnail 2">
+            </div>
+             <div class="carousel-cell">
+              <img src="/assets/images/project-1-282f27.jpg" alt="Thumbnail 2">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
     <!-- ============================================== -->
     <!-- ✨      Kitchen Interior Hero Section        ✨ -->
     <!-- ============================================== -->
@@ -2194,182 +2096,6 @@
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     
     <!-- Initialize Flickity -->
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const reviewsFlickity = new Flickity('.flickity-reviews', {
-          cellAlign: 'left',
-          contain: true,
-          groupCells: false,
-          pageDots: false,
-          prevNextButtons: false, // Hide default buttons
-          wrapAround: false
-        });
-
-        // Connect custom arrows to Flickity
-        const prevBtn = document.getElementById('reviews-prev-btn');
-        const nextBtn = document.getElementById('reviews-next-btn');
-
-        if (prevBtn && nextBtn) {
-          prevBtn.addEventListener('click', function() {
-            reviewsFlickity.previous();
-          });
-
-          nextBtn.addEventListener('click', function() {
-            reviewsFlickity.next();
-          });
-
-          // Update arrow states based on slider position
-          function updateArrowStates() {
-            const selectedIndex = reviewsFlickity.selectedIndex;
-            const slideCount = reviewsFlickity.slides.length;
-            
-            // Update previous button opacity
-            if (selectedIndex === 0) {
-              prevBtn.style.opacity = '0.3';
-              prevBtn.style.pointerEvents = 'none';
-            } else {
-              prevBtn.style.opacity = '1';
-              prevBtn.style.pointerEvents = 'auto';
-            }
-            
-            // Update next button opacity
-            if (selectedIndex >= slideCount - 3) { // Since we show 3 slides at once
-              nextBtn.style.opacity = '0.3';
-              nextBtn.style.pointerEvents = 'none';
-            } else {
-              nextBtn.style.opacity = '1';
-              nextBtn.style.pointerEvents = 'auto';
-            }
-          }
-
-          // Initial state update
-          updateArrowStates();
-
-          // Update states on slide change
-          reviewsFlickity.on('select', updateArrowStates);
-        }
-
-        // Initialize Projects Flickity
-        const projectsFlickity = new Flickity('.flickity-projects', {
-          cellAlign: 'left',
-          contain: true,
-          groupCells: false,
-          pageDots: false,
-          prevNextButtons: false, // Hide default buttons
-          wrapAround: false
-        });
-
-        // Connect custom arrows to Projects Flickity
-        const projectsPrevBtn = document.getElementById('projects-prev-btn');
-        const projectsNextBtn = document.getElementById('projects-next-btn');
-
-        if (projectsPrevBtn && projectsNextBtn) {
-          projectsPrevBtn.addEventListener('click', function() {
-            projectsFlickity.previous();
-          });
-
-          projectsNextBtn.addEventListener('click', function() {
-            projectsFlickity.next();
-          });
-
-          // Update arrow states based on slider position
-          function updateProjectsArrowStates() {
-            const selectedIndex = projectsFlickity.selectedIndex;
-            const slideCount = projectsFlickity.slides.length;
-            
-            // Update previous button opacity
-            if (selectedIndex === 0) {
-              projectsPrevBtn.style.opacity = '0.3';
-              projectsPrevBtn.style.pointerEvents = 'none';
-            } else {
-              projectsPrevBtn.style.opacity = '1';
-              projectsPrevBtn.style.pointerEvents = 'auto';
-            }
-            
-            // Update next button opacity
-            if (selectedIndex >= slideCount - 3) { // Since we show 1 slide at once (full 3x2 grid)
-              projectsNextBtn.style.opacity = '0.3';
-              projectsNextBtn.style.pointerEvents = 'none';
-            } else {
-              projectsNextBtn.style.opacity = '1';
-              projectsNextBtn.style.pointerEvents = 'auto';
-            }
-          }
-
-          // Initial state update
-          updateProjectsArrowStates();
-
-          // Update states on slide change
-          projectsFlickity.on('select', updateProjectsArrowStates);
-        }
-
-        // Initialize Kitchen Project Flickity
-        const kitchenFlickity = new Flickity('.flickity-kitchen', {
-          cellAlign: 'left',
-          contain: true,
-          groupCells: false,
-          pageDots: false,
-          prevNextButtons: false, // Hide default buttons
-          wrapAround: false
-        });
-
-        // Connect custom arrows to Kitchen Flickity
-        const kitchenPrevBtn = document.getElementById('kitchen-prev-btn');
-        const kitchenNextBtn = document.getElementById('kitchen-next-btn');
-
-        if (kitchenPrevBtn && kitchenNextBtn) {
-          kitchenPrevBtn.addEventListener('click', function() {
-            kitchenFlickity.previous();
-          });
-
-          kitchenNextBtn.addEventListener('click', function() {
-            kitchenFlickity.next();
-          });
-
-          // Update arrow states based on slider position
-          function updateKitchenArrowStates() {
-            const selectedIndex = kitchenFlickity.selectedIndex;
-            const slideCount = kitchenFlickity.slides.length;
-            
-            // Update previous button opacity
-            if (selectedIndex === 0) {
-              kitchenPrevBtn.style.opacity = '0.3';
-              kitchenPrevBtn.style.pointerEvents = 'none';
-            } else {
-              kitchenPrevBtn.style.opacity = '1';
-              kitchenPrevBtn.style.pointerEvents = 'auto';
-            }
-            
-            // Update next button opacity based on responsive breakpoints
-            let visibleSlides = 1; // Mobile default
-            
-            if (window.innerWidth >= 1280) { // Desktop
-              visibleSlides = 5;
-            } else if (window.innerWidth >= 1024) { // Laptop
-              visibleSlides = 4;
-            } else if (window.innerWidth >= 768) { // Tablet
-              visibleSlides = 2;
-            }
-            
-            if (selectedIndex >= slideCount - visibleSlides) {
-              kitchenNextBtn.style.opacity = '0.3';
-              kitchenNextBtn.style.pointerEvents = 'none';
-            } else {
-              kitchenNextBtn.style.opacity = '1';
-              kitchenNextBtn.style.pointerEvents = 'auto';
-            }
-          }
-
-          // Initial state update
-          updateKitchenArrowStates();
-
-          // Update states on slide change
-          kitchenFlickity.on('select', updateKitchenArrowStates);
-          
-          // Update states on window resize
-          window.addEventListener('resize', updateKitchenArrowStates);
-        }
-      });
-    </script>
+<script src="/app.js"></script>
   </body>
 </html>
