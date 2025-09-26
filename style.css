@@ -5,7 +5,12 @@ body {
 }
 
 .box {
-  max-width: 1700px;
+  max-width: 1580px;
+  margin: auto;
+  padding: 0 16px;
+}
+.box2 {
+  max-width: 1718px;
   margin: auto;
   padding: 0 16px;
 }
