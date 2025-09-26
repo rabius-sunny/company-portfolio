@@ -226,7 +226,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   function openModal(imageIndex, type = 'review') {
-    // Get images for this gallery based on type
+    // Get images for this gallery based on type (using same arrays for consistency)
     let images;
     if (type === 'project') {
       images = projectGalleryImages[imageIndex % projectGalleryImages.length];
@@ -238,13 +238,24 @@ document.addEventListener('DOMContentLoaded', function () {
     modalMainSlider.innerHTML = '';
     modalThumbnails.innerHTML = '';
 
-    // Create main slider slides
+    // Create main slider slides with videos
     images.forEach((imageSrc, i) => {
       const mainSlide = document.createElement('div');
       mainSlide.className = 'carousel-cell';
-      mainSlide.innerHTML = `<img src="${imageSrc}" alt="Gallery Image ${
-        i + 1
-      }">`;
+      mainSlide.innerHTML = `
+        <video 
+          src="assets/video.mp4" 
+          preload="metadata"
+          autoplay
+          controls
+          muted
+          class="w-full h-full object-cover"
+          style="max-height: 80vh; background: #000;"
+          data-slide-index="${i}"
+        >
+          Your browser does not support the video tag.
+        </video>
+      `;
       modalMainSlider.appendChild(mainSlide);
 
       const thumbSlide = document.createElement('div');
@@ -279,19 +290,74 @@ document.addEventListener('DOMContentLoaded', function () {
         percentPosition: false
       });
 
-      // Custom navigation
+      // Function to reset video on slide change (no autoplay)
+      function resetCurrentVideo() {
+        const currentSlide = mainSliderFlickity.selectedElement;
+        const currentVideo = currentSlide.querySelector('video');
+
+        // Pause all videos and reset current video to beginning
+        const allVideos = modalMainSlider.querySelectorAll('video');
+        allVideos.forEach((video) => {
+          video.pause();
+          if (video === currentVideo) {
+            video.currentTime = 0;
+          }
+        });
+      }
+
+      // Function to start first video on modal open
+      function startFirstVideo() {
+        const firstSlide = mainSliderFlickity.selectedElement;
+        const firstVideo = firstSlide.querySelector('video');
+
+        // Pause all videos first
+        const allVideos = modalMainSlider.querySelectorAll('video');
+        allVideos.forEach((video) => {
+          video.pause();
+        });
+
+        // Then start the first video
+        if (firstVideo) {
+          firstVideo.currentTime = 0;
+          firstVideo.play().catch((e) => {
+            console.log('Video autoplay prevented:', e);
+            // If autoplay fails, try muted autoplay
+            firstVideo.muted = true;
+            firstVideo.play().catch((e2) => {
+              console.log('Muted autoplay also failed:', e2);
+            });
+          });
+        }
+      } // Reset video on main slider change
+      mainSliderFlickity.on('select', () => {
+        thumbnailsFlickity.select(mainSliderFlickity.selectedIndex);
+        resetCurrentVideo();
+      });
+
+      // Handle thumbnail click to change main slider and reset video
+      thumbnailsFlickity.on('select', () => {
+        mainSliderFlickity.select(thumbnailsFlickity.selectedIndex);
+        resetCurrentVideo();
+      });
+
+      // Start first video on modal open
+      setTimeout(() => {
+        startFirstVideo();
+      }, 100);
+
+      // Main navigation arrows
       const modalPrevBtn = document.getElementById('modalPrevBtn');
       const modalNextBtn = document.getElementById('modalNextBtn');
 
-      modalPrevBtn.addEventListener('click', () =>
-        mainSliderFlickity.previous()
-      );
-      modalNextBtn.addEventListener('click', () => mainSliderFlickity.next());
+      if (modalPrevBtn && modalNextBtn) {
+        modalPrevBtn.addEventListener('click', () => {
+          mainSliderFlickity.previous();
+        });
 
-      // Sync sliders
-      mainSliderFlickity.on('select', () => {
-        thumbnailsFlickity.select(mainSliderFlickity.selectedIndex);
-      });
+        modalNextBtn.addEventListener('click', () => {
+          mainSliderFlickity.next();
+        });
+      }
 
       // Thumbnail navigation arrows
       const thumbnailPrevBtn = document.getElementById('modalThumbnailPrevBtn');
@@ -343,6 +409,12 @@ document.addEventListener('DOMContentLoaded', function () {
   function closeModal() {
     modal.classList.remove('active');
     document.body.style.overflow = '';
+
+    // Pause all videos
+    const allVideos = modalMainSlider.querySelectorAll('video');
+    allVideos.forEach((video) => {
+      video.pause();
+    });
 
     // Destroy Flickity instances
     if (mainSliderFlickity) {

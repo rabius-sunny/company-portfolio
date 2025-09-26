@@ -377,6 +377,62 @@ html {
   border-radius: 8px;
 }
 
+/* Video styles in modal */
+.modal-main-slider .carousel-cell video {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  border-radius: 8px;
+  background: #000;
+  outline: none;
+}
+
+.modal-main-slider .carousel-cell video:focus {
+  outline: 2px solid #cead73;
+}
+
+@media (max-width: 768px) {
+  .modal-main-slider .carousel-cell video {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Video play button overlay */
+.video-play-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: rgba(206, 173, 115, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  z-index: 1000;
+}
+
+.video-play-overlay:hover {
+  background: rgba(206, 173, 115, 1);
+  transform: translate(-50%, -50%) scale(1.1);
+  box-shadow: 0 4px 20px rgba(206, 173, 115, 0.4);
+}
+
+.video-play-overlay svg {
+  width: 32px;
+  height: 32px;
+  fill: #0d3730;
+  margin-left: 4px;
+}
+
 .modal-thumbnails {
   position: absolute;
   bottom: 0;
