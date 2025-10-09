@@ -243,18 +243,30 @@ document.addEventListener('DOMContentLoaded', function () {
       const mainSlide = document.createElement('div');
       mainSlide.className = 'carousel-cell';
       mainSlide.innerHTML = `
-        <video 
-          src="assets/video.mp4" 
-          preload="metadata"
-          autoplay
-          controls
-          muted
-          class="w-full h-full object-cover"
-          style="max-height: 80vh; background: #000;"
-          data-slide-index="${i}"
-        >
-          Your browser does not support the video tag.
-        </video>
+        <div style="position: relative; width: 100%; height: 100%;">
+          <!-- Fancy Video Loader -->
+          <div class="video-loader-overlay" data-loader-index="${i}">
+            <div class="video-loader-spinner"></div>
+            <div class="video-loader-text">Loading Video</div>
+            <div class="video-loader-dots">
+              <div class="video-loader-dot"></div>
+              <div class="video-loader-dot"></div>
+              <div class="video-loader-dot"></div>
+            </div>
+          </div>
+          <!-- Video Element -->
+          <video 
+            src="assets/video.mp4" 
+            preload="metadata"
+            controls
+            muted
+            class="w-full h-full object-cover"
+            style="max-height: 80vh; background: #000;"
+            data-slide-index="${i}"
+          >
+            Your browser does not support the video tag.
+          </video>
+        </div>
       `;
       modalMainSlider.appendChild(mainSlide);
 
@@ -294,14 +306,96 @@ document.addEventListener('DOMContentLoaded', function () {
       function resetCurrentVideo() {
         const currentSlide = mainSliderFlickity.selectedElement;
         const currentVideo = currentSlide.querySelector('video');
+        const currentLoader = currentSlide.querySelector(
+          '.video-loader-overlay'
+        );
 
         // Pause all videos and reset current video to beginning
         const allVideos = modalMainSlider.querySelectorAll('video');
+        const allLoaders = modalMainSlider.querySelectorAll(
+          '.video-loader-overlay'
+        );
+
         allVideos.forEach((video) => {
           video.pause();
           if (video === currentVideo) {
             video.currentTime = 0;
+            // Show loader for current video
+            if (currentLoader && video.readyState < 3) {
+              currentLoader.classList.remove('hidden');
+            }
           }
+        });
+
+        // Hide all other loaders
+        allLoaders.forEach((loader) => {
+          if (loader !== currentLoader) {
+            loader.classList.add('hidden');
+          }
+        });
+      }
+
+      // Function to setup video loading handlers
+      function setupVideoLoaders() {
+        const allVideos = modalMainSlider.querySelectorAll('video');
+
+        allVideos.forEach((video, index) => {
+          const loader = video.parentElement.querySelector(
+            '.video-loader-overlay'
+          );
+
+          // Show loader initially if video is not ready
+          if (video.readyState < 3) {
+            loader.classList.remove('hidden');
+          } else {
+            loader.classList.add('hidden');
+          }
+
+          // Hide loader when video can play
+          video.addEventListener('canplay', function () {
+            if (loader) {
+              loader.classList.add('hidden');
+            }
+          });
+
+          // Hide loader when video is fully loaded
+          video.addEventListener('canplaythrough', function () {
+            if (loader) {
+              loader.classList.add('hidden');
+            }
+          });
+
+          // Show loader when video is waiting/buffering
+          video.addEventListener('waiting', function () {
+            if (loader) {
+              loader.classList.remove('hidden');
+            }
+          });
+
+          // Hide loader when video starts playing
+          video.addEventListener('playing', function () {
+            if (loader) {
+              loader.classList.add('hidden');
+            }
+          });
+
+          // Show loader on load start
+          video.addEventListener('loadstart', function () {
+            if (loader) {
+              loader.classList.remove('hidden');
+            }
+          });
+
+          // Handle errors
+          video.addEventListener('error', function () {
+            if (loader) {
+              const loaderText = loader.querySelector('.video-loader-text');
+              if (loaderText) {
+                loaderText.textContent = 'Error Loading Video';
+                loaderText.style.color = '#ff6b6b';
+              }
+            }
+          });
         });
       }
 
@@ -309,12 +403,18 @@ document.addEventListener('DOMContentLoaded', function () {
       function startFirstVideo() {
         const firstSlide = mainSliderFlickity.selectedElement;
         const firstVideo = firstSlide.querySelector('video');
+        const firstLoader = firstSlide.querySelector('.video-loader-overlay');
 
         // Pause all videos first
         const allVideos = modalMainSlider.querySelectorAll('video');
         allVideos.forEach((video) => {
           video.pause();
         });
+
+        // Show loader for first video if not ready
+        if (firstLoader && firstVideo.readyState < 3) {
+          firstLoader.classList.remove('hidden');
+        }
 
         // Then start the first video
         if (firstVideo) {
@@ -328,7 +428,10 @@ document.addEventListener('DOMContentLoaded', function () {
             });
           });
         }
-      } // Reset video on main slider change
+      }
+
+      // Setup video loaders for all videos
+      setupVideoLoaders(); // Reset video on main slider change
       mainSliderFlickity.on('select', () => {
         thumbnailsFlickity.select(mainSliderFlickity.selectedIndex);
         resetCurrentVideo();
